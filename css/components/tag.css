@@ -1,0 +1,90 @@
+/* Tags (no presionables), iniciales de empresa y chips de filtro (presionables) */
+@layer components {
+  /* Tag: píldora de contorno, sin relleno. No hay tono azul: un tag azul parecería botón */
+  .tag {
+    --tag-c: var(--ink-2);
+    --tag-b: var(--hairline-strong);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 11px;
+    border-radius: var(--r-pill);
+    border: 1px solid var(--tag-b);
+    color: var(--tag-c);
+    font-size: var(--fs-micro);
+    font-weight: var(--fw-mid);
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+  .tag--neutro { --tag-c: var(--muted); --tag-b: var(--hairline); }
+  .tag--curso  { --tag-c: var(--ink); --tag-b: var(--hairline-strong); }
+  .tag--bien   { --tag-c: var(--ok); --tag-b: rgba(94, 234, 212, 0.35); }
+  .tag--mal    { --tag-c: var(--danger); --tag-b: rgba(248, 113, 113, 0.35); }
+  .tag .icon { width: 13px; height: 13px; }
+
+  /* Chip de tecnología: relleno de vidrio, tipografía pequeña */
+  .tech {
+    display: inline-flex;
+    padding: 4px 10px;
+    border-radius: var(--r-pill);
+    background: var(--glass);
+    color: var(--ink-2);
+    font-size: var(--fs-caption);
+    line-height: 1.5;
+  }
+
+  /* Iniciales: cuadro de la empresa con tinte determinista */
+  .iniciales {
+    --ini-bg: var(--tint-neutral-bg);
+    --ini-fg: var(--tint-neutral-fg);
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--r-md);
+    background: var(--ini-bg);
+    color: var(--ini-fg);
+    border: 1px solid var(--edge);
+    font-size: var(--fs-ui);
+    font-weight: var(--fw-demi);
+    letter-spacing: 0.02em;
+  }
+  .iniciales--sm { width: 28px; height: 28px; border-radius: var(--r-pill); font-size: 11px; }
+  .iniciales--lg { width: 56px; height: 56px; border-radius: 16px; font-size: 18px; }
+  .iniciales--blue   { --ini-bg: var(--tint-blue-bg);   --ini-fg: var(--tint-blue-fg); }
+  .iniciales--teal   { --ini-bg: var(--tint-teal-bg);   --ini-fg: var(--tint-teal-fg); }
+  .iniciales--violet { --ini-bg: var(--tint-violet-bg); --ini-fg: var(--tint-violet-fg); }
+  .iniciales--rose   { --ini-bg: var(--tint-rose-bg);   --ini-fg: var(--tint-rose-fg); }
+
+  /* Chip de filtro: presionable (aria-pressed); el activo usa el acento */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 36px;
+    padding: 6px 14px;
+    border-radius: var(--r-pill);
+    border: 1px solid var(--hairline);
+    background: transparent;
+    color: var(--ink-2);
+    font-size: var(--fs-ui);
+    font-weight: var(--fw-mid);
+    transition: background-color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+  }
+  .chip:hover { border-color: var(--hairline-strong); color: var(--ink); }
+  .chip[aria-pressed="true"], .chip[aria-checked="true"], .chip.is-active {
+    border-color: rgba(157, 176, 255, 0.55);
+    background: var(--accent-tint);
+    color: var(--accent-on-dark);
+  }
+  .chip .icon { width: 14px; height: 14px; }
+  .chip__count {
+    min-width: 20px;
+    padding: 0 6px;
+    border-radius: var(--r-pill);
+    background: var(--glass);
+    font-size: var(--fs-micro);
+    color: var(--ink-2);
+  }
+}

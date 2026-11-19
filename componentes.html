@@ -52,6 +52,22 @@
         <button class="btn btn--text" type="button">Botón de texto</button>
       </div>
     </section>
+    <section aria-labelledby="t-tag">
+      <h2 id="t-tag">Etiquetas, iniciales y chips</h2>
+      <div class="cluster">
+        <span class="tag tag--bien">Remoto</span><span class="tag tag--curso">Híbrido</span><span class="tag tag--curso">Presencial</span>
+        <span class="tag tag--neutro">Pausada</span><span class="tag tag--bien">Aceptada</span><span class="tag tag--mal">Rechazada</span>
+      </div>
+      <div class="cluster"><span class="tech">React</span><span class="tech">TypeScript</span><span class="tech">CSS</span></div>
+      <div class="cluster">
+        <span class="iniciales iniciales--blue">CL</span><span class="iniciales iniciales--teal">TS</span><span class="iniciales iniciales--violet">JT</span>
+        <span class="iniciales iniciales--rose">MD</span><span class="iniciales">HS</span><span class="iniciales iniciales--lg iniciales--teal">IC</span>
+      </div>
+      <div class="cluster" role="group" aria-label="Modalidad">
+        <button class="chip" type="button" aria-pressed="true">Todas</button><button class="chip" type="button" aria-pressed="false">Remoto</button>
+        <button class="chip" type="button" aria-pressed="false">Híbrido</button><button class="chip" type="button" aria-pressed="false">Presencial <span class="chip__count">8</span></button>
+      </div>
+    </section>
   </main>
   <script type="module" src="js/layout.js"></script>
 </body>
