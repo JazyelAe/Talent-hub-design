@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "nombre": "Cenote Labs",
+    "ciudad": "Mérida, Yuc.",
+    "giro": "Producto SaaS para logística"
+  },
+  {
+    "id": 2,
+    "nombre": "Tule Software",
+    "ciudad": "Oaxaca, Oax.",
+    "giro": "Consultoría de software a la medida"
+  },
+  {
+    "id": 3,
+    "nombre": "Jacaranda Tech",
+    "ciudad": "Ciudad de México, CDMX",
+    "giro": "Plataforma de pagos para comercios"
+  },
+  {
+    "id": 4,
+    "nombre": "Maguey Digital",
+    "ciudad": "Guadalajara, Jal.",
+    "giro": "Agencia de productos digitales"
+  },
+  {
+    "id": 5,
+    "nombre": "Huasteca Systems",
+    "ciudad": "San Luis Potosí, S.L.P.",
+    "giro": "Software industrial y de manufactura"
+  },
+  {
+    "id": 6,
+    "nombre": "Tlali Data",
+    "ciudad": "Monterrey, N.L.",
+    "giro": "Analítica de datos para retail"
+  },
+  {
+    "id": 7,
+    "nombre": "Cacao Works",
+    "ciudad": "Puebla, Pue.",
+    "giro": "Estudio de desarrollo móvil"
+  },
+  {
+    "id": 8,
+    "nombre": "Pirul Studio",
+    "ciudad": "Querétaro, Qro.",
+    "giro": "Diseño y desarrollo web"
+  },
+  {
+    "id": 9,
+    "nombre": "Ixtle Cloud",
+    "ciudad": "Ciudad de México, CDMX",
+    "giro": "Infraestructura en la nube"
+  },
+  {
+    "id": 10,
+    "nombre": "Copal Software",
+    "ciudad": "Tijuana, B.C.",
+    "giro": "Software educativo"
+  },
+  {
+    "id": 11,
+    "nombre": "Agave Analytics",
+    "ciudad": "León, Gto.",
+    "giro": "Ciencia de datos y modelos de riesgo"
+  },
+  {
+    "id": 12,
+    "nombre": "Pochote Labs",
+    "ciudad": "Chihuahua, Chih.",
+    "giro": "Ciberseguridad para pymes"
+  }
+]

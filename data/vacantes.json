@@ -1,0 +1,1666 @@
+[
+  {
+    "id": 112,
+    "titulo": "Desarrollador Móvil Mid",
+    "rol": "Desarrollador Móvil",
+    "nivel": "Mid",
+    "empresa_id": 9,
+    "modalidad": "remoto",
+    "ciudad": "Ciudad de México, CDMX",
+    "salario_min": 34000,
+    "salario_max": 43500,
+    "tecnologias": [
+      "Swift",
+      "iOS",
+      "SwiftUI"
+    ],
+    "experiencia_anios": 4,
+    "descripcion": "Participarás en la migración de sistemas heredados hacia una arquitectura moderna, documentando cada decisión.",
+    "requisitos_extra": "Disponibilidad para visitar la oficina una vez al mes.",
+    "beneficios": [
+      "Seguro de gastos médicos mayores",
+      "Prestaciones de ley y superiores",
+      "Equipo de cómputo"
+    ],
+    "fecha_publicacion": "2026-11-18",
+    "estado": "publicada"
+  },
+  {
+    "id": 139,
+    "titulo": "Científico de Datos Sr",
+    "rol": "Científico de Datos",
+    "nivel": "Sr",
+    "empresa_id": 2,
+    "modalidad": "remoto",
+    "ciudad": "Toluca, Edo. Méx.",
+    "salario_min": 40500,
+    "salario_max": 46000,
+    "tecnologias": [
+      "Python",
+      "PyTorch",
+      "MLOps"
+    ],
+    "experiencia_anios": 6,
+    "descripcion": "Te sumarás a un equipo de producto que entrega cada semana y decide junto con diseño qué construir.",
+    "requisitos_extra": "Experiencia trabajando con metodologías ágiles.",
+    "beneficios": [
+      "Presupuesto anual de capacitación",
+      "30 días de aguinaldo",
+      "Prestaciones de ley y superiores"
+    ],
+    "fecha_publicacion": "2026-11-18",
+    "estado": "publicada"
+  },
+  {
+    "id": 197,
+    "titulo": "Analista QA Mid",
+    "rol": "Analista QA",
+    "nivel": "Mid",
+    "empresa_id": 6,
+    "modalidad": "hibrido",
+    "ciudad": "Monterrey, N.L.",
+    "salario_min": 34000,
+    "salario_max": 41000,
+    "tecnologias": [
+      "Selenium",
+      "Java",
+      "Jira"
+    ],
+    "experiencia_anios": 2,
+    "descripcion": "Participarás en la migración de sistemas heredados hacia una arquitectura moderna, documentando cada decisión.",
+    "requisitos_extra": "Experiencia con control de versiones en Git.",
+    "beneficios": [
+      "Presupuesto anual de capacitación",
+      "30 días de aguinaldo",
+      "Equipo de cómputo"
+    ],
+    "fecha_publicacion": "2026-11-16",
+    "estado": "publicada"
+  },
+  {
+    "id": 232,
+    "titulo": "Desarrollador Frontend Mid",
+    "rol": "Desarrollador Frontend",
+    "nivel": "Mid",
+    "empresa_id": 2,
+    "modalidad": "remoto",
+    "ciudad": "León, Gto.",
+    "salario_min": 25500,
+    "salario_max": 39500,
+    "tecnologias": [
+      "React",
+      "TypeScript",
+      "CSS"
+    ],
+    "experiencia_anios": 4,
+    "descripcion": "Te sumarás a un equipo de producto que entrega cada semana y decide junto con diseño qué construir.",
+    "requisitos_extra": "Conocimientos básicos de accesibilidad web.",
+    "beneficios": [
+      "Equipo de cómputo",
+      "Seguro de gastos médicos mayores",
+      "Horario flexible"
+    ],
+    "fecha_publicacion": "2026-11-16",
+    "estado": "publicada"
+  },
+  {
+    "id": 239,
+    "titulo": "Analista QA Mid",
+    "rol": "Analista QA",
+    "nivel": "Mid",
+    "empresa_id": 9,
+    "modalidad": "remoto",
+    "ciudad": "Ciudad de México, CDMX",
+    "salario_min": 24000,
+    "salario_max": 33000,
+    "tecnologias": [
+      "Selenium",
+      "Java",
+      "Jira"
+    ],
+    "experiencia_anios": 4,
+    "descripcion": "Trabajarás en un equipo pequeño donde tu código llega a producción el mismo día y escuchas a los usuarios de primera mano.",
+    "requisitos_extra": "Disponibilidad para visitar la oficina una vez al mes.",
+    "beneficios": [
+      "30 días de aguinaldo",
+      "Vales de despensa",
+      "Equipo de cómputo"
+    ],
+    "fecha_publicacion": "2026-11-15",
+    "estado": "publicada"
+  },
+  {
+    "id": 155,
+    "titulo": "Diseñador UX/UI Sr",
+    "rol": "Diseñador UX/UI",
+    "nivel": "Sr",
+    "empresa_id": 3,
+    "modalidad": "hibrido",
+    "ciudad": "Ciudad de México, CDMX",
+    "salario_min": 47000,
+    "salario_max": 58500,
+    "tecnologias": [
+      "Figma",
+      "Prototipado",
+      "Design Systems"
+    ],
+    "experiencia_anios": 5,
+    "descripcion": "Mantendrás y harás crecer la plataforma principal, con pruebas automáticas y revisiones de código en cada cambio.",
+    "requisitos_extra": "Conocimientos básicos de accesibilidad web.",
+    "beneficios": [
+      "Vales de despensa",
+      "Equipo de cómputo",
+      "Presupuesto anual de capacitación"
+    ],
+    "fecha_publicacion": "2026-11-13",
+    "estado": "publicada"
+  },
+  {
+    "id": 142,
+    "titulo": "Ingeniero de Datos Jr",
+    "rol": "Ingeniero de Datos",
+    "nivel": "Jr",
+    "empresa_id": 12,
+    "modalidad": "presencial",
+    "ciudad": "Mérida, Yuc.",
+    "salario_min": 19500,
+    "salario_max": 30500,
+    "tecnologias": [
+      "dbt",
+      "BigQuery",
+      "SQL"
+    ],
+    "experiencia_anios": 1,
+    "descripcion": "Te sumarás a un equipo de producto que entrega cada semana y decide junto con diseño qué construir.",
+    "requisitos_extra": "Experiencia con control de versiones en Git.",
+    "beneficios": [
+      "Vales de despensa",
+      "Equipo de cómputo",
+      "Horario flexible"
+    ],
+    "fecha_publicacion": "2026-11-12",
+    "estado": "publicada"
+  },
+  {
+    "id": 195,
+    "titulo": "Analista QA Jr",
+    "rol": "Analista QA",
+    "nivel": "Jr",
+    "empresa_id": 8,
+    "modalidad": "hibrido",
+    "ciudad": "Chihuahua, Chih.",
+    "salario_min": 19000,
+    "salario_max": 29000,
+    "tecnologias": [
+      "Selenium",
+      "Java",
+      "Jira"
+    ],
+    "experiencia_anios": 1,
+    "descripcion": "Construirás funciones nuevas desde la idea hasta el despliegue, con autonomía y acompañamiento de personas senior.",
+    "requisitos_extra": "Experiencia trabajando con metodologías ágiles.",
+    "beneficios": [
+      "30 días de aguinaldo",
+      "Prestaciones de ley y superiores",
+      "Horario flexible"
+    ],
+    "fecha_publicacion": "2026-11-12",
+    "estado": "publicada"
+  },
+  {
+    "id": 246,
+    "titulo": "Especialista en Ciberseguridad Sr",
+    "rol": "Especialista en Ciberseguridad",
+    "nivel": "Sr",
+    "empresa_id": 9,
+    "modalidad": "hibrido",
+    "ciudad": "Ciudad de México, CDMX",
+    "salario_min": 65000,
+    "salario_max": 80000,
+    "tecnologias": [
+      "Linux",
+      "Python",
+      "Redes"
+    ],
+    "experiencia_anios": 5,
+    "descripcion": "Mantendrás y harás crecer la plataforma principal, con pruebas automáticas y revisiones de código en cada cambio.",
+    "requisitos_extra": "Conocimientos básicos de accesibilidad web.",
+    "beneficios": [
+      "30 días de aguinaldo",
+      "Presupuesto anual de capacitación",
+      "Prestaciones de ley y superiores"
+    ],
+    "fecha_publicacion": "2026-11-12",
+    "estado": "publicada"
+  },
+  {
+    "id": 200,
+    "titulo": "Desarrollador Full Stack Sr",
+    "rol": "Desarrollador Full Stack",
+    "nivel": "Sr",
+    "empresa_id": 1,
+    "modalidad": "hibrido",
+    "ciudad": "Mérida, Yuc.",
+    "salario_min": 50000,
+    "salario_max": 56500,
+    "tecnologias": [
+      "React",
+      "Node.js",
+      "MongoDB"
+    ],
+    "experiencia_anios": 6,
+    "descripcion": "Construirás funciones nuevas desde la idea hasta el despliegue, con autonomía y acompañamiento de personas senior.",
+    "requisitos_extra": "Disponibilidad para visitar la oficina una vez al mes.",
+    "beneficios": [
+      "Prestaciones de ley y superiores",
+      "Equipo de cómputo",
+      "30 días de aguinaldo"
+    ],
+    "fecha_publicacion": "2026-11-11",
+    "estado": "pausada"
+  },
+  {
+    "id": 128,
+    "titulo": "Ingeniero DevOps Mid",
+    "rol": "Ingeniero DevOps",
+    "nivel": "Mid",
+    "empresa_id": 10,
+    "modalidad": "remoto",
+    "ciudad": "Toluca, Edo. Méx.",
+    "salario_min": 28500,
+    "salario_max": 39000,
+    "tecnologias": [
+      "Kubernetes",
+      "Terraform",
+      "AWS"
+    ],
+    "experiencia_anios": 2,
+    "descripcion": "Trabajarás en un equipo pequeño donde tu código llega a producción el mismo día y escuchas a los usuarios de primera mano.",
+    "requisitos_extra": "Inglés intermedio para leer documentación.",
+    "beneficios": [
+      "Equipo de cómputo",
+      "Vales de despensa",
+      "Seguro de gastos médicos mayores"
+    ],
+    "fecha_publicacion": "2026-11-10",
+    "estado": "publicada"
+  },
+  {
+    "id": 188,
+    "titulo": "Científico de Datos Jr",
+    "rol": "Científico de Datos",
+    "nivel": "Jr",
+    "empresa_id": 10,
+    "modalidad": "hibrido",
+    "ciudad": "Mérida, Yuc.",
+    "salario_min": 19500,
+    "salario_max": 27500,
+    "tecnologias": [
+      "Python",
+      "PyTorch",
+      "MLOps"
+    ],
+    "experiencia_anios": 1,
+    "descripcion": "Trabajarás en un equipo pequeño donde tu código llega a producción el mismo día y escuchas a los usuarios de primera mano.",
+    "requisitos_extra": "Inglés intermedio para leer documentación.",
+    "beneficios": [
+      "Horario flexible",
+      "Equipo de cómputo",
+      "Presupuesto anual de capacitación"
+    ],
+    "fecha_publicacion": "2026-11-10",
+    "estado": "publicada"
+  },
+  {
+    "id": 146,
+    "titulo": "Desarrollador Móvil Mid",
+    "rol": "Desarrollador Móvil",
+    "nivel": "Mid",
+    "empresa_id": 1,
+    "modalidad": "remoto",
+    "ciudad": "Mérida, Yuc.",
+    "salario_min": 30000,
+    "salario_max": 35500,
+    "tecnologias": [
+      "Swift",
+      "iOS",
+      "SwiftUI"
+    ],
+    "experiencia_anios": 3,
+    "descripcion": "Colaborarás con clientes de distintos sectores y rotarás entre proyectos cortos con objetivos claros.",
+    "requisitos_extra": "Inglés intermedio para leer documentación.",
+    "beneficios": [
+      "Seguro de gastos médicos mayores",
+      "Equipo de cómputo",
+      "Presupuesto anual de capacitación"
+    ],
+    "fecha_publicacion": "2026-11-09",
+    "estado": "publicada"
+  },
+  {
+    "id": 258,
+    "titulo": "Especialista en Ciberseguridad Jr",
+    "rol": "Especialista en Ciberseguridad",
+    "nivel": "Jr",
+    "empresa_id": 2,
+    "modalidad": "hibrido",
+    "ciudad": "Oaxaca, Oax.",
+    "salario_min": 15000,
+    "salario_max": 22000,
+    "tecnologias": [
+      "Linux",
+      "Python",
+      "Redes"
+    ],
+    "experiencia_anios": 1,
+    "descripcion": "Colaborarás con clientes de distintos sectores y rotarás entre proyectos cortos con objetivos claros.",
+    "requisitos_extra": "Disponibilidad para visitar la oficina una vez al mes.",
+    "beneficios": [
+      "Prestaciones de ley y superiores",
+      "Presupuesto anual de capacitación",
+      "Vales de despensa"
+    ],
+    "fecha_publicacion": "2026-11-09",
+    "estado": "publicada"
+  },
+  {
+    "id": 178,
+    "titulo": "Diseñador UX/UI Sr",
+    "rol": "Diseñador UX/UI",
+    "nivel": "Sr",
+    "empresa_id": 6,
+    "modalidad": "presencial",
+    "ciudad": "Tijuana, B.C.",
+    "salario_min": 58500,
+    "salario_max": 63500,
+    "tecnologias": [
+      "Figma",
+      "HTML",
+      "CSS"
+    ],
+    "experiencia_anios": 5,
+    "descripcion": "Colaborarás con clientes de distintos sectores y rotarás entre proyectos cortos con objetivos claros.",
+    "requisitos_extra": "Inglés intermedio para leer documentación.",
+    "beneficios": [
+      "Presupuesto anual de capacitación",
+      "Equipo de cómputo",
+      "Horario flexible"
+    ],
+    "fecha_publicacion": "2026-11-08",
+    "estado": "publicada"
+  },
+  {
+    "id": 256,
+    "titulo": "Analista QA Jr",
+    "rol": "Analista QA",
+    "nivel": "Jr",
+    "empresa_id": 2,
+    "modalidad": "hibrido",
+    "ciudad": "Toluca, Edo. Méx.",
+    "salario_min": 19500,
+    "salario_max": 31000,
+    "tecnologias": [
+      "Selenium",
+      "Java",
+      "Jira"
+    ],
+    "experiencia_anios": 1,
+    "descripcion": "Construirás funciones nuevas desde la idea hasta el despliegue, con autonomía y acompañamiento de personas senior.",
+    "requisitos_extra": "Conocimientos básicos de accesibilidad web.",
+    "beneficios": [
+      "Presupuesto anual de capacitación",
+      "Vales de despensa",
+      "Prestaciones de ley y superiores"
+    ],
+    "fecha_publicacion": "2026-11-08",
+    "estado": "publicada"
+  },
+  {
+    "id": 219,
+    "titulo": "Desarrollador Backend Sr",
+    "rol": "Desarrollador Backend",
+    "nivel": "Sr",
+    "empresa_id": 6,
+    "modalidad": "hibrido",
+    "ciudad": "Monterrey, N.L.",
+    "salario_min": 58000,
+    "salario_max": 70500,
+    "tecnologias": [
+      "Python",
+      "Django",
+      "Redis"
+    ],
+    "experiencia_anios": 6,
+    "descripcion": "Participarás en la migración de sistemas heredados hacia una arquitectura moderna, documentando cada decisión.",
+    "requisitos_extra": "Gusto por escribir pruebas y documentación.",
+    "beneficios": [
+      "Presupuesto anual de capacitación",
+      "Prestaciones de ley y superiores",
+      "Horario flexible"
+    ],
+    "fecha_publicacion": "2026-11-07",
+    "estado": "publicada"
+  },
+  {
+    "id": 141,
+    "titulo": "Diseñador UX/UI Sr",
+    "rol": "Diseñador UX/UI",
+    "nivel": "Sr",
+    "empresa_id": 5,
+    "modalidad": "presencial",
+    "ciudad": "San Luis Potosí, S.L.P.",
+    "salario_min": 57500,
+    "salario_max": 70500,
+    "tecnologias": [
+      "Figma",
+      "Prototipado",
+      "Design Systems"
+    ],
+    "experiencia_anios": 4,
+    "descripcion": "Mantendrás y harás crecer la plataforma principal, con pruebas automáticas y revisiones de código en cada cambio.",
+    "requisitos_extra": "Conocimientos básicos de accesibilidad web.",
+    "beneficios": [
+      "30 días de aguinaldo",
+      "Horario flexible",
+      "Presupuesto anual de capacitación"
+    ],
+    "fecha_publicacion": "2026-11-06",
+    "estado": "publicada"
+  },
+  {
+    "id": 224,
+    "titulo": "Desarrollador Backend Mid",
+    "rol": "Desarrollador Backend",
+    "nivel": "Mid",
+    "empresa_id": 12,
+    "modalidad": "hibrido",
+    "ciudad": "León, Gto.",
+    "salario_min": 25500,
+    "salario_max": 36500,
+    "tecnologias": [
+      "Java",
+      "Spring",
+      "MySQL"
+    ],
+    "experiencia_anios": 4,
+    "descripcion": "Colaborarás con clientes de distintos sectores y rotarás entre proyectos cortos con objetivos claros.",
+    "requisitos_extra": "Inglés intermedio para leer documentación.",
+    "beneficios": [
+      "Equipo de cómputo",
+      "30 días de aguinaldo",
+      "Prestaciones de ley y superiores"
+    ],
+    "fecha_publicacion": "2026-11-06",
+    "estado": "publicada"
+  },
+  {
+    "id": 109,
+    "titulo": "Analista QA Mid",
+    "rol": "Analista QA",
+    "nivel": "Mid",
+    "empresa_id": 8,
+    "modalidad": "remoto",
+    "ciudad": "Querétaro, Qro.",
+    "salario_min": 32500,
+    "salario_max": 42500,
+    "tecnologias": [
+      "Cypress",
+      "JavaScript",
+      "Postman"
+    ],
+    "experiencia_anios": 2,
+    "descripcion": "Mantendrás y harás crecer la plataforma principal, con pruebas automáticas y revisiones de código en cada cambio.",
+    "requisitos_extra": "Experiencia trabajando con metodologías ágiles.",
+    "beneficios": [
+      "30 días de aguinaldo",
+      "Equipo de cómputo",
+      "Presupuesto anual de capacitación"
+    ],
+    "fecha_publicacion": "2026-11-05",
+    "estado": "publicada"
+  },
+  {
+    "id": 180,
+    "titulo": "Desarrollador Frontend Jr",
+    "rol": "Desarrollador Frontend",
+    "nivel": "Jr",
+    "empresa_id": 4,
+    "modalidad": "hibrido",
+    "ciudad": "Mérida, Yuc.",
+    "salario_min": 16500,
+    "salario_max": 26500,
+    "tecnologias": [
+      "React",
+      "TypeScript",
+      "CSS"
+    ],
+    "experiencia_anios": 2,
+    "descripcion": "Te sumarás a un equipo de producto que entrega cada semana y decide junto con diseño qué construir.",
+    "requisitos_extra": "Gusto por escribir pruebas y documentación.",
+    "beneficios": [
+      "Presupuesto anual de capacitación",
+      "Prestaciones de ley y superiores",
+      "Seguro de gastos médicos mayores"
+    ],
+    "fecha_publicacion": "2026-11-05",
+    "estado": "publicada"
+  },
+  {
+    "id": 204,
+    "titulo": "Analista QA Mid",
+    "rol": "Analista QA",
+    "nivel": "Mid",
+    "empresa_id": 11,
+    "modalidad": "hibrido",
+    "ciudad": "León, Gto.",
+    "salario_min": 32000,
+    "salario_max": 40500,
+    "tecnologias": [
+      "Cypress",
+      "JavaScript",
+      "Postman"
+    ],
+    "experiencia_anios": 2,
+    "descripcion": "Mantendrás y harás crecer la plataforma principal, con pruebas automáticas y revisiones de código en cada cambio.",
+    "requisitos_extra": "Disponibilidad para visitar la oficina una vez al mes.",
+    "beneficios": [
+      "Horario flexible",
+      "Seguro de gastos médicos mayores",
+      "Equipo de cómputo"
+    ],
+    "fecha_publicacion": "2026-11-05",
+    "estado": "publicada"
+  },
+  {
+    "id": 110,
+    "titulo": "Diseñador UX/UI Jr",
+    "rol": "Diseñador UX/UI",
+    "nivel": "Jr",
+    "empresa_id": 5,
+    "modalidad": "presencial",
+    "ciudad": "San Luis Potosí, S.L.P.",
+    "salario_min": 16000,
+    "salario_max": 28000,
+    "tecnologias": [
+      "Figma",
+      "HTML",
+      "CSS"
+    ],
+    "experiencia_anios": 1,
+    "descripcion": "Mantendrás y harás crecer la plataforma principal, con pruebas automáticas y revisiones de código en cada cambio.",
+    "requisitos_extra": "Conocimientos básicos de accesibilidad web.",
+    "beneficios": [
+      "Seguro de gastos médicos mayores",
+      "Horario flexible",
+      "Prestaciones de ley y superiores"
+    ],
+    "fecha_publicacion": "2026-11-03",
+    "estado": "publicada"
+  },
+  {
+    "id": 115,
+    "titulo": "Desarrollador Frontend Sr",
+    "rol": "Desarrollador Frontend",
+    "nivel": "Sr",
+    "empresa_id": 10,
+    "modalidad": "presencial",
+    "ciudad": "Tijuana, B.C.",
+    "salario_min": 50500,
+    "salario_max": 55500,
+    "tecnologias": [
+      "Vue",
+      "JavaScript",
+      "Tailwind"
+    ],
+    "experiencia_anios": 5,
+    "descripcion": "Construirás funciones nuevas desde la idea hasta el despliegue, con autonomía y acompañamiento de personas senior.",
+    "requisitos_extra": "Experiencia trabajando con metodologías ágiles.",
+    "beneficios": [
+      "Vales de despensa",
+      "Prestaciones de ley y superiores",
+      "30 días de aguinaldo"
+    ],
+    "fecha_publicacion": "2026-11-03",
+    "estado": "publicada"
+  },
+  {
+    "id": 104,
+    "titulo": "Ingeniero DevOps Mid",
+    "rol": "Ingeniero DevOps",
+    "nivel": "Mid",
+    "empresa_id": 11,
+    "modalidad": "remoto",
+    "ciudad": "Aguascalientes, Ags.",
+    "salario_min": 34500,
+    "salario_max": 49500,
+    "tecnologias": [
+      "Docker",
+      "GitLab CI",
+      "Linux"
+    ],
+    "experiencia_anios": 4,
+    "descripcion": "Mantendrás y harás crecer la plataforma principal, con pruebas automáticas y revisiones de código en cada cambio.",
+    "requisitos_extra": "Disponibilidad para visitar la oficina una vez al mes.",
+    "beneficios": [
+      "Horario flexible",
+      "Equipo de cómputo",
+      "Presupuesto anual de capacitación"
+    ],
+    "fecha_publicacion": "2026-11-02",
+    "estado": "publicada"
+  },
+  {
+    "id": 207,
+    "titulo": "Desarrollador Backend Mid",
+    "rol": "Desarrollador Backend",
+    "nivel": "Mid",
+    "empresa_id": 2,
+    "modalidad": "hibrido",
+    "ciudad": "Oaxaca, Oax.",
+    "salario_min": 33500,
+    "salario_max": 40500,
+    "tecnologias": [
+      "Python",
+      "Django",
+      "Redis"
+    ],
+    "experiencia_anios": 3,
+    "descripcion": "Mantendrás y harás crecer la plataforma principal, con pruebas automáticas y revisiones de código en cada cambio.",
+    "requisitos_extra": "Conocimientos básicos de accesibilidad web.",
+    "beneficios": [
+      "Vales de despensa",
+      "Equipo de cómputo",
+      "Seguro de gastos médicos mayores"
+    ],
+    "fecha_publicacion": "2026-11-02",
+    "estado": "publicada"
+  },
+  {
+    "id": 242,
+    "titulo": "Desarrollador Móvil Sr",
+    "rol": "Desarrollador Móvil",
+    "nivel": "Sr",
+    "empresa_id": 7,
+    "modalidad": "remoto",
+    "ciudad": "Puebla, Pue.",
+    "salario_min": 60500,
+    "salario_max": 74000,
+    "tecnologias": [
+      "Swift",
+      "iOS",
+      "SwiftUI"
+    ],
+    "experiencia_anios": 4,
+    "descripcion": "Trabajarás en un equipo pequeño donde tu código llega a producción el mismo día y escuchas a los usuarios de primera mano.",
+    "requisitos_extra": "Gusto por escribir pruebas y documentación.",
+    "beneficios": [
+      "30 días de aguinaldo",
+      "Prestaciones de ley y superiores",
+      "Seguro de gastos médicos mayores"
+    ],
+    "fecha_publicacion": "2026-11-02",
+    "estado": "publicada"
+  },
+  {
+    "id": 162,
+    "titulo": "Desarrollador Full Stack Mid",
+    "rol": "Desarrollador Full Stack",
+    "nivel": "Mid",
+    "empresa_id": 3,
+    "modalidad": "hibrido",
+    "ciudad": "Mérida, Yuc.",
+    "salario_min": 24000,
+    "salario_max": 34500,
+    "tecnologias": [
+      "Laravel",
+      "Vue",
+      "MySQL"
+    ],
+    "experiencia_anios": 4,
+    "descripcion": "Construirás funciones nuevas desde la idea hasta el despliegue, con autonomía y acompañamiento de personas senior.",
+    "requisitos_extra": "Inglés intermedio para leer documentación.",
+    "beneficios": [
+      "Seguro de gastos médicos mayores",
+      "Horario flexible",
+      "Equipo de cómputo"
+    ],
+    "fecha_publicacion": "2026-11-01",
+    "estado": "publicada"
+  },
+  {
+    "id": 237,
+    "titulo": "Científico de Datos Mid",
+    "rol": "Científico de Datos",
+    "nivel": "Mid",
+    "empresa_id": 12,
+    "modalidad": "remoto",
+    "ciudad": "Chihuahua, Chih.",
+    "salario_min": 29000,
+    "salario_max": 38000,
+    "tecnologias": [
+      "Python",
+      "scikit-learn",
+      "SQL"
+    ],
+    "experiencia_anios": 3,
+    "descripcion": "Trabajarás en un equipo pequeño donde tu código llega a producción el mismo día y escuchas a los usuarios de primera mano.",
+    "requisitos_extra": "Experiencia trabajando con metodologías ágiles.",
+    "beneficios": [
+      "Vales de despensa",
+      "Prestaciones de ley y superiores",
+      "Horario flexible"
+    ],
+    "fecha_publicacion": "2026-11-01",
+    "estado": "publicada"
+  },
+  {
+    "id": 186,
+    "titulo": "Ingeniero DevOps Mid",
+    "rol": "Ingeniero DevOps",
+    "nivel": "Mid",
+    "empresa_id": 11,
+    "modalidad": "remoto",
+    "ciudad": "Aguascalientes, Ags.",
+    "salario_min": 30000,
+    "salario_max": 39000,
+    "tecnologias": [
+      "Azure",
+      "Terraform",
+      "Ansible"
+    ],
+    "experiencia_anios": 3,
+    "descripcion": "Te sumarás a un equipo de producto que entrega cada semana y decide junto con diseño qué construir.",
+    "requisitos_extra": "Disponibilidad para visitar la oficina una vez al mes.",
+    "beneficios": [
+      "Vales de despensa",
+      "30 días de aguinaldo",
+      "Seguro de gastos médicos mayores"
+    ],
+    "fecha_publicacion": "2026-10-31",
+    "estado": "publicada"
+  },
+  {
+    "id": 122,
+    "titulo": "Desarrollador Backend Jr",
+    "rol": "Desarrollador Backend",
+    "nivel": "Jr",
+    "empresa_id": 3,
+    "modalidad": "hibrido",
+    "ciudad": "Ciudad de México, CDMX",
+    "salario_min": 15500,
+    "salario_max": 27500,
+    "tecnologias": [
+      "Node.js",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "experiencia_anios": 1,
+    "descripcion": "Trabajarás en un equipo pequeño donde tu código llega a producción el mismo día y escuchas a los usuarios de primera mano.",
+    "requisitos_extra": "Inglés intermedio para leer documentación.",
+    "beneficios": [
+      "Prestaciones de ley y superiores",
+      "Seguro de gastos médicos mayores",
+      "Equipo de cómputo"
+    ],
+    "fecha_publicacion": "2026-10-30",
+    "estado": "publicada"
+  },
+  {
+    "id": 226,
+    "titulo": "Desarrollador Full Stack Mid",
+    "rol": "Desarrollador Full Stack",
+    "nivel": "Mid",
+    "empresa_id": 10,
+    "modalidad": "presencial",
+    "ciudad": "Tijuana, B.C.",
+    "salario_min": 31500,
+    "salario_max": 42000,
+    "tecnologias": [
+      "Next.js",
+      "TypeScript",
+      "Prisma"
+    ],
+    "experiencia_anios": 2,
+    "descripcion": "Colaborarás con clientes de distintos sectores y rotarás entre proyectos cortos con objetivos claros.",
+    "requisitos_extra": "Inglés intermedio para leer documentación.",
+    "beneficios": [
+      "Equipo de cómputo",
+      "Prestaciones de ley y superiores",
+      "Seguro de gastos médicos mayores"
+    ],
+    "fecha_publicacion": "2026-10-30",
+    "estado": "publicada"
+  },
+  {
+    "id": 266,
+    "titulo": "Desarrollador Full Stack Mid",
+    "rol": "Desarrollador Full Stack",
+    "nivel": "Mid",
+    "empresa_id": 3,
+    "modalidad": "remoto",
+    "ciudad": "Morelia, Mich.",
+    "salario_min": 35000,
+    "salario_max": 48000,
+    "tecnologias": [
+      "React",
+      "Node.js",
+      "MongoDB"
+    ],
+    "experiencia_anios": 3,
+    "descripcion": "Colaborarás con clientes de distintos sectores y rotarás entre proyectos cortos con objetivos claros.",
+    "requisitos_extra": "Disponibilidad para visitar la oficina una vez al mes.",
+    "beneficios": [
+      "Prestaciones de ley y superiores",
+      "Horario flexible",
+      "30 días de aguinaldo"
+    ],
+    "fecha_publicacion": "2026-10-30",
+    "estado": "publicada"
+  },
+  {
+    "id": 248,
+    "titulo": "Especialista en Ciberseguridad Sr",
+    "rol": "Especialista en Ciberseguridad",
+    "nivel": "Sr",
+    "empresa_id": 2,
+    "modalidad": "remoto",
+    "ciudad": "Toluca, Edo. Méx.",
+    "salario_min": 47500,
+    "salario_max": 61500,
+    "tecnologias": [
+      "OWASP",
+      "Burp Suite",
+      "Python"
+    ],
+    "experiencia_anios": 6,
+    "descripcion": "Te sumarás a un equipo de producto que entrega cada semana y decide junto con diseño qué construir.",
+    "requisitos_extra": "Inglés intermedio para leer documentación.",
+    "beneficios": [
+      "Vales de despensa",
+      "Equipo de cómputo",
+      "Presupuesto anual de capacitación"
+    ],
+    "fecha_publicacion": "2026-10-29",
+    "estado": "publicada"
+  },
+  {
+    "id": 250,
+    "titulo": "Ingeniero de Datos Jr",
+    "rol": "Ingeniero de Datos",
+    "nivel": "Jr",
+    "empresa_id": 8,
+    "modalidad": "hibrido",
+    "ciudad": "Tijuana, B.C.",
+    "salario_min": 14000,
+    "salario_max": 24500,
+    "tecnologias": [
+      "Python",
+      "SQL",
+      "Airflow"
+    ],
+    "experiencia_anios": 0,
+    "descripcion": "Construirás funciones nuevas desde la idea hasta el despliegue, con autonomía y acompañamiento de personas senior.",
+    "requisitos_extra": "Experiencia con control de versiones en Git.",
+    "beneficios": [
+      "Presupuesto anual de capacitación",
+      "Prestaciones de ley y superiores",
+      "Vales de despensa"
+    ],
+    "fecha_publicacion": "2026-10-29",
+    "estado": "publicada"
+  },
+  {
+    "id": 259,
+    "titulo": "Desarrollador Backend Mid",
+    "rol": "Desarrollador Backend",
+    "nivel": "Mid",
+    "empresa_id": 10,
+    "modalidad": "remoto",
+    "ciudad": "León, Gto.",
+    "salario_min": 24500,
+    "salario_max": 32500,
+    "tecnologias": [
+      "Go",
+      "gRPC",
+      "PostgreSQL"
+    ],
+    "experiencia_anios": 4,
+    "descripcion": "Trabajarás en un equipo pequeño donde tu código llega a producción el mismo día y escuchas a los usuarios de primera mano.",
+    "requisitos_extra": "Experiencia con control de versiones en Git.",
+    "beneficios": [
+      "Presupuesto anual de capacitación",
+      "30 días de aguinaldo",
+      "Seguro de gastos médicos mayores"
+    ],
+    "fecha_publicacion": "2026-10-28",
+    "estado": "publicada"
+  },
+  {
+    "id": 182,
+    "titulo": "Analista QA Sr",
+    "rol": "Analista QA",
+    "nivel": "Sr",
+    "empresa_id": 5,
+    "modalidad": "hibrido",
+    "ciudad": "Ciudad de México, CDMX",
+    "salario_min": 49000,
+    "salario_max": 64500,
+    "tecnologias": [
+      "Playwright",
+      "TypeScript",
+      "CI/CD"
+    ],
+    "experiencia_anios": 5,
+    "descripcion": "Colaborarás con clientes de distintos sectores y rotarás entre proyectos cortos con objetivos claros.",
+    "requisitos_extra": "Inglés intermedio para leer documentación.",
+    "beneficios": [
+      "30 días de aguinaldo",
+      "Horario flexible",
+      "Presupuesto anual de capacitación"
+    ],
+    "fecha_publicacion": "2026-10-27",
+    "estado": "publicada"
+  },
+  {
+    "id": 101,
+    "titulo": "Desarrollador Backend Sr",
+    "rol": "Desarrollador Backend",
+    "nivel": "Sr",
+    "empresa_id": 3,
+    "modalidad": "presencial",
+    "ciudad": "Ciudad de México, CDMX",
+    "salario_min": 64500,
+    "salario_max": 79500,
+    "tecnologias": [
+      "Java",
+      "Spring",
+      "MySQL"
+    ],
+    "experiencia_anios": 5,
+    "descripcion": "Colaborarás con clientes de distintos sectores y rotarás entre proyectos cortos con objetivos claros.",
+    "requisitos_extra": "Disponibilidad para visitar la oficina una vez al mes.",
+    "beneficios": [
+      "Presupuesto anual de capacitación",
+      "30 días de aguinaldo",
+      "Prestaciones de ley y superiores"
+    ],
+    "fecha_publicacion": "2026-10-26",
+    "estado": "publicada"
+  },
+  {
+    "id": 158,
+    "titulo": "Desarrollador Backend Jr",
+    "rol": "Desarrollador Backend",
+    "nivel": "Jr",
+    "empresa_id": 4,
+    "modalidad": "hibrido",
+    "ciudad": "Ciudad de México, CDMX",
+    "salario_min": 17000,
+    "salario_max": 23000,
+    "tecnologias": [
+      "Python",
+      "Django",
+      "Redis"
+    ],
+    "experiencia_anios": 0,
+    "descripcion": "Trabajarás en un equipo pequeño donde tu código llega a producción el mismo día y escuchas a los usuarios de primera mano.",
+    "requisitos_extra": "Disponibilidad para visitar la oficina una vez al mes.",
+    "beneficios": [
+      "Horario flexible",
+      "Vales de despensa",
+      "Seguro de gastos médicos mayores"
+    ],
+    "fecha_publicacion": "2026-10-26",
+    "estado": "publicada"
+  },
+  {
+    "id": 163,
+    "titulo": "Ingeniero DevOps Jr",
+    "rol": "Ingeniero DevOps",
+    "nivel": "Jr",
+    "empresa_id": 1,
+    "modalidad": "hibrido",
+    "ciudad": "Mérida, Yuc.",
+    "salario_min": 18500,
+    "salario_max": 23500,
+    "tecnologias": [
+      "Kubernetes",
+      "Terraform",
+      "AWS"
+    ],
+    "experiencia_anios": 1,
+    "descripcion": "Mantendrás y harás crecer la plataforma principal, con pruebas automáticas y revisiones de código en cada cambio.",
+    "requisitos_extra": "Inglés intermedio para leer documentación.",
+    "beneficios": [
+      "30 días de aguinaldo",
+      "Presupuesto anual de capacitación",
+      "Seguro de gastos médicos mayores"
+    ],
+    "fecha_publicacion": "2026-10-26",
+    "estado": "publicada"
+  },
+  {
+    "id": 117,
+    "titulo": "Desarrollador Móvil Mid",
+    "rol": "Desarrollador Móvil",
+    "nivel": "Mid",
+    "empresa_id": 4,
+    "modalidad": "remoto",
+    "ciudad": "Ciudad de México, CDMX",
+    "salario_min": 34500,
+    "salario_max": 43500,
+    "tecnologias": [
+      "Kotlin",
+      "Android",
+      "Firebase"
+    ],
+    "experiencia_anios": 3,
+    "descripcion": "Te sumarás a un equipo de producto que entrega cada semana y decide junto con diseño qué construir.",
+    "requisitos_extra": "Conocimientos básicos de accesibilidad web.",
+    "beneficios": [
+      "Seguro de gastos médicos mayores",
+      "30 días de aguinaldo",
+      "Equipo de cómputo"
+    ],
+    "fecha_publicacion": "2026-10-25",
+    "estado": "publicada"
+  },
+  {
+    "id": 172,
+    "titulo": "Ingeniero DevOps Jr",
+    "rol": "Ingeniero DevOps",
+    "nivel": "Jr",
+    "empresa_id": 4,
+    "modalidad": "hibrido",
+    "ciudad": "Guadalajara, Jal.",
+    "salario_min": 14000,
+    "salario_max": 28500,
+    "tecnologias": [
+      "Azure",
+      "Terraform",
+      "Ansible"
+    ],
+    "experiencia_anios": 0,
+    "descripcion": "Construirás funciones nuevas desde la idea hasta el despliegue, con autonomía y acompañamiento de personas senior.",
+    "requisitos_extra": "Gusto por escribir pruebas y documentación.",
+    "beneficios": [
+      "Seguro de gastos médicos mayores",
+      "30 días de aguinaldo",
+      "Equipo de cómputo"
+    ],
+    "fecha_publicacion": "2026-10-25",
+    "estado": "publicada"
+  },
+  {
+    "id": 114,
+    "titulo": "Científico de Datos Mid",
+    "rol": "Científico de Datos",
+    "nivel": "Mid",
+    "empresa_id": 12,
+    "modalidad": "presencial",
+    "ciudad": "Chihuahua, Chih.",
+    "salario_min": 27500,
+    "salario_max": 39500,
+    "tecnologias": [
+      "Python",
+      "scikit-learn",
+      "SQL"
+    ],
+    "experiencia_anios": 2,
+    "descripcion": "Construirás funciones nuevas desde la idea hasta el despliegue, con autonomía y acompañamiento de personas senior.",
+    "requisitos_extra": "Conocimientos básicos de accesibilidad web.",
+    "beneficios": [
+      "Vales de despensa",
+      "Prestaciones de ley y superiores",
+      "Presupuesto anual de capacitación"
+    ],
+    "fecha_publicacion": "2026-10-23",
+    "estado": "publicada"
+  },
+  {
+    "id": 149,
+    "titulo": "Especialista en Ciberseguridad Jr",
+    "rol": "Especialista en Ciberseguridad",
+    "nivel": "Jr",
+    "empresa_id": 5,
+    "modalidad": "remoto",
+    "ciudad": "Puebla, Pue.",
+    "salario_min": 14500,
+    "salario_max": 19500,
+    "tecnologias": [
+      "OWASP",
+      "Burp Suite",
+      "Python"
+    ],
+    "experiencia_anios": 0,
+    "descripcion": "Colaborarás con clientes de distintos sectores y rotarás entre proyectos cortos con objetivos claros.",
+    "requisitos_extra": "Experiencia con control de versiones en Git.",
+    "beneficios": [
+      "Vales de despensa",
+      "Equipo de cómputo",
+      "30 días de aguinaldo"
+    ],
+    "fecha_publicacion": "2026-10-22",
+    "estado": "publicada"
+  },
+  {
+    "id": 105,
+    "titulo": "Desarrollador Frontend Mid",
+    "rol": "Desarrollador Frontend",
+    "nivel": "Mid",
+    "empresa_id": 6,
+    "modalidad": "presencial",
+    "ciudad": "Tijuana, B.C.",
+    "salario_min": 25500,
+    "salario_max": 34000,
+    "tecnologias": [
+      "React",
+      "TypeScript",
+      "CSS"
+    ],
+    "experiencia_anios": 2,
+    "descripcion": "Te sumarás a un equipo de producto que entrega cada semana y decide junto con diseño qué construir.",
+    "requisitos_extra": "Gusto por escribir pruebas y documentación.",
+    "beneficios": [
+      "Horario flexible",
+      "Vales de despensa",
+      "Equipo de cómputo"
+    ],
+    "fecha_publicacion": "2026-10-21",
+    "estado": "publicada"
+  },
+  {
+    "id": 147,
+    "titulo": "Científico de Datos Jr",
+    "rol": "Científico de Datos",
+    "nivel": "Jr",
+    "empresa_id": 10,
+    "modalidad": "presencial",
+    "ciudad": "Puebla, Pue.",
+    "salario_min": 19000,
+    "salario_max": 29000,
+    "tecnologias": [
+      "Python",
+      "scikit-learn",
+      "SQL"
+    ],
+    "experiencia_anios": 1,
+    "descripcion": "Trabajarás en un equipo pequeño donde tu código llega a producción el mismo día y escuchas a los usuarios de primera mano.",
+    "requisitos_extra": "Gusto por escribir pruebas y documentación.",
+    "beneficios": [
+      "Horario flexible",
+      "Seguro de gastos médicos mayores",
+      "Equipo de cómputo"
+    ],
+    "fecha_publicacion": "2026-10-21",
+    "estado": "publicada"
+  },
+  {
+    "id": 176,
+    "titulo": "Ingeniero DevOps Mid",
+    "rol": "Ingeniero DevOps",
+    "nivel": "Mid",
+    "empresa_id": 11,
+    "modalidad": "remoto",
+    "ciudad": "León, Gto.",
+    "salario_min": 30500,
+    "salario_max": 40500,
+    "tecnologias": [
+      "Kubernetes",
+      "Terraform",
+      "AWS"
+    ],
+    "experiencia_anios": 4,
+    "descripcion": "Te sumarás a un equipo de producto que entrega cada semana y decide junto con diseño qué construir.",
+    "requisitos_extra": "Conocimientos básicos de accesibilidad web.",
+    "beneficios": [
+      "Presupuesto anual de capacitación",
+      "Vales de despensa",
+      "Seguro de gastos médicos mayores"
+    ],
+    "fecha_publicacion": "2026-10-21",
+    "estado": "publicada"
+  },
+  {
+    "id": 236,
+    "titulo": "Desarrollador Backend Mid",
+    "rol": "Desarrollador Backend",
+    "nivel": "Mid",
+    "empresa_id": 9,
+    "modalidad": "hibrido",
+    "ciudad": "Ciudad de México, CDMX",
+    "salario_min": 27500,
+    "salario_max": 33500,
+    "tecnologias": [
+      "Python",
+      "Django",
+      "Redis"
+    ],
+    "experiencia_anios": 4,
+    "descripcion": "Construirás funciones nuevas desde la idea hasta el despliegue, con autonomía y acompañamiento de personas senior.",
+    "requisitos_extra": "Experiencia con control de versiones en Git.",
+    "beneficios": [
+      "Horario flexible",
+      "Presupuesto anual de capacitación",
+      "Equipo de cómputo"
+    ],
+    "fecha_publicacion": "2026-10-21",
+    "estado": "publicada"
+  },
+  {
+    "id": 125,
+    "titulo": "Desarrollador Frontend Sr",
+    "rol": "Desarrollador Frontend",
+    "nivel": "Sr",
+    "empresa_id": 2,
+    "modalidad": "presencial",
+    "ciudad": "Oaxaca, Oax.",
+    "salario_min": 41500,
+    "salario_max": 57000,
+    "tecnologias": [
+      "React",
+      "TypeScript",
+      "CSS"
+    ],
+    "experiencia_anios": 5,
+    "descripcion": "Trabajarás en un equipo pequeño donde tu código llega a producción el mismo día y escuchas a los usuarios de primera mano.",
+    "requisitos_extra": "Conocimientos básicos de accesibilidad web.",
+    "beneficios": [
+      "Vales de despensa",
+      "Seguro de gastos médicos mayores",
+      "Presupuesto anual de capacitación"
+    ],
+    "fecha_publicacion": "2026-10-20",
+    "estado": "publicada"
+  },
+  {
+    "id": 136,
+    "titulo": "Diseñador UX/UI Mid",
+    "rol": "Diseñador UX/UI",
+    "nivel": "Mid",
+    "empresa_id": 2,
+    "modalidad": "hibrido",
+    "ciudad": "Aguascalientes, Ags.",
+    "salario_min": 31500,
+    "salario_max": 37000,
+    "tecnologias": [
+      "Figma",
+      "HTML",
+      "CSS"
+    ],
+    "experiencia_anios": 3,
+    "descripcion": "Mantendrás y harás crecer la plataforma principal, con pruebas automáticas y revisiones de código en cada cambio.",
+    "requisitos_extra": "Experiencia con control de versiones en Git.",
+    "beneficios": [
+      "Presupuesto anual de capacitación",
+      "30 días de aguinaldo",
+      "Seguro de gastos médicos mayores"
+    ],
+    "fecha_publicacion": "2026-10-20",
+    "estado": "publicada"
+  },
+  {
+    "id": 192,
+    "titulo": "Desarrollador Full Stack Jr",
+    "rol": "Desarrollador Full Stack",
+    "nivel": "Jr",
+    "empresa_id": 8,
+    "modalidad": "hibrido",
+    "ciudad": "Querétaro, Qro.",
+    "salario_min": 16500,
+    "salario_max": 26000,
+    "tecnologias": [
+      "React",
+      "Node.js",
+      "MongoDB"
+    ],
+    "experiencia_anios": 1,
+    "descripcion": "Participarás en la migración de sistemas heredados hacia una arquitectura moderna, documentando cada decisión.",
+    "requisitos_extra": "Gusto por escribir pruebas y documentación.",
+    "beneficios": [
+      "Prestaciones de ley y superiores",
+      "Presupuesto anual de capacitación",
+      "Vales de despensa"
+    ],
+    "fecha_publicacion": "2026-10-20",
+    "estado": "publicada"
+  },
+  {
+    "id": 263,
+    "titulo": "Científico de Datos Jr",
+    "rol": "Científico de Datos",
+    "nivel": "Jr",
+    "empresa_id": 2,
+    "modalidad": "hibrido",
+    "ciudad": "Oaxaca, Oax.",
+    "salario_min": 15000,
+    "salario_max": 26000,
+    "tecnologias": [
+      "Python",
+      "scikit-learn",
+      "SQL"
+    ],
+    "experiencia_anios": 1,
+    "descripcion": "Construirás funciones nuevas desde la idea hasta el despliegue, con autonomía y acompañamiento de personas senior.",
+    "requisitos_extra": "Experiencia con control de versiones en Git.",
+    "beneficios": [
+      "Seguro de gastos médicos mayores",
+      "30 días de aguinaldo",
+      "Prestaciones de ley y superiores"
+    ],
+    "fecha_publicacion": "2026-10-20",
+    "estado": "publicada"
+  },
+  {
+    "id": 153,
+    "titulo": "Ingeniero DevOps Mid",
+    "rol": "Ingeniero DevOps",
+    "nivel": "Mid",
+    "empresa_id": 6,
+    "modalidad": "remoto",
+    "ciudad": "Monterrey, N.L.",
+    "salario_min": 30000,
+    "salario_max": 35500,
+    "tecnologias": [
+      "Kubernetes",
+      "Terraform",
+      "AWS"
+    ],
+    "experiencia_anios": 4,
+    "descripcion": "Participarás en la migración de sistemas heredados hacia una arquitectura moderna, documentando cada decisión.",
+    "requisitos_extra": "Experiencia con control de versiones en Git.",
+    "beneficios": [
+      "Prestaciones de ley y superiores",
+      "Horario flexible",
+      "30 días de aguinaldo"
+    ],
+    "fecha_publicacion": "2026-10-19",
+    "estado": "publicada"
+  },
+  {
+    "id": 191,
+    "titulo": "Ingeniero de Datos Sr",
+    "rol": "Ingeniero de Datos",
+    "nivel": "Sr",
+    "empresa_id": 5,
+    "modalidad": "remoto",
+    "ciudad": "San Luis Potosí, S.L.P.",
+    "salario_min": 50500,
+    "salario_max": 65000,
+    "tecnologias": [
+      "dbt",
+      "BigQuery",
+      "SQL"
+    ],
+    "experiencia_anios": 6,
+    "descripcion": "Colaborarás con clientes de distintos sectores y rotarás entre proyectos cortos con objetivos claros.",
+    "requisitos_extra": "Gusto por escribir pruebas y documentación.",
+    "beneficios": [
+      "Vales de despensa",
+      "Presupuesto anual de capacitación",
+      "30 días de aguinaldo"
+    ],
+    "fecha_publicacion": "2026-10-19",
+    "estado": "publicada"
+  },
+  {
+    "id": 211,
+    "titulo": "Desarrollador Backend Jr",
+    "rol": "Desarrollador Backend",
+    "nivel": "Jr",
+    "empresa_id": 3,
+    "modalidad": "hibrido",
+    "ciudad": "León, Gto.",
+    "salario_min": 17500,
+    "salario_max": 25500,
+    "tecnologias": [
+      "Python",
+      "Django",
+      "Redis"
+    ],
+    "experiencia_anios": 2,
+    "descripcion": "Colaborarás con clientes de distintos sectores y rotarás entre proyectos cortos con objetivos claros.",
+    "requisitos_extra": "Experiencia con control de versiones en Git.",
+    "beneficios": [
+      "Horario flexible",
+      "Prestaciones de ley y superiores",
+      "Equipo de cómputo"
+    ],
+    "fecha_publicacion": "2026-10-19",
+    "estado": "publicada"
+  },
+  {
+    "id": 220,
+    "titulo": "Científico de Datos Sr",
+    "rol": "Científico de Datos",
+    "nivel": "Sr",
+    "empresa_id": 5,
+    "modalidad": "presencial",
+    "ciudad": "Tijuana, B.C.",
+    "salario_min": 46000,
+    "salario_max": 53000,
+    "tecnologias": [
+      "Python",
+      "scikit-learn",
+      "SQL"
+    ],
+    "experiencia_anios": 5,
+    "descripcion": "Trabajarás en un equipo pequeño donde tu código llega a producción el mismo día y escuchas a los usuarios de primera mano.",
+    "requisitos_extra": "Experiencia con control de versiones en Git.",
+    "beneficios": [
+      "Seguro de gastos médicos mayores",
+      "Horario flexible",
+      "30 días de aguinaldo"
+    ],
+    "fecha_publicacion": "2026-10-19",
+    "estado": "publicada"
+  },
+  {
+    "id": 161,
+    "titulo": "Ingeniero DevOps Sr",
+    "rol": "Ingeniero DevOps",
+    "nivel": "Sr",
+    "empresa_id": 9,
+    "modalidad": "presencial",
+    "ciudad": "Puebla, Pue.",
+    "salario_min": 54500,
+    "salario_max": 61000,
+    "tecnologias": [
+      "Kubernetes",
+      "Terraform",
+      "AWS"
+    ],
+    "experiencia_anios": 5,
+    "descripcion": "Construirás funciones nuevas desde la idea hasta el despliegue, con autonomía y acompañamiento de personas senior.",
+    "requisitos_extra": "Experiencia con control de versiones en Git.",
+    "beneficios": [
+      "Prestaciones de ley y superiores",
+      "Presupuesto anual de capacitación",
+      "Horario flexible"
+    ],
+    "fecha_publicacion": "2026-10-18",
+    "estado": "publicada"
+  },
+  {
+    "id": 119,
+    "titulo": "Desarrollador Full Stack Mid",
+    "rol": "Desarrollador Full Stack",
+    "nivel": "Mid",
+    "empresa_id": 5,
+    "modalidad": "hibrido",
+    "ciudad": "San Luis Potosí, S.L.P.",
+    "salario_min": 25500,
+    "salario_max": 35000,
+    "tecnologias": [
+      "Next.js",
+      "TypeScript",
+      "Prisma"
+    ],
+    "experiencia_anios": 3,
+    "descripcion": "Colaborarás con clientes de distintos sectores y rotarás entre proyectos cortos con objetivos claros.",
+    "requisitos_extra": "Disponibilidad para visitar la oficina una vez al mes.",
+    "beneficios": [
+      "Equipo de cómputo",
+      "Seguro de gastos médicos mayores",
+      "Presupuesto anual de capacitación"
+    ],
+    "fecha_publicacion": "2026-10-17",
+    "estado": "publicada"
+  },
+  {
+    "id": 229,
+    "titulo": "Científico de Datos Mid",
+    "rol": "Científico de Datos",
+    "nivel": "Mid",
+    "empresa_id": 1,
+    "modalidad": "remoto",
+    "ciudad": "Mérida, Yuc.",
+    "salario_min": 30500,
+    "salario_max": 43000,
+    "tecnologias": [
+      "Python",
+      "PyTorch",
+      "MLOps"
+    ],
+    "experiencia_anios": 4,
+    "descripcion": "Participarás en la migración de sistemas heredados hacia una arquitectura moderna, documentando cada decisión.",
+    "requisitos_extra": "Experiencia trabajando con metodologías ágiles.",
+    "beneficios": [
+      "30 días de aguinaldo",
+      "Equipo de cómputo",
+      "Horario flexible"
+    ],
+    "fecha_publicacion": "2026-10-17",
+    "estado": "en_revision"
+  },
+  {
+    "id": 254,
+    "titulo": "Desarrollador Backend Jr",
+    "rol": "Desarrollador Backend",
+    "nivel": "Jr",
+    "empresa_id": 3,
+    "modalidad": "hibrido",
+    "ciudad": "Ciudad de México, CDMX",
+    "salario_min": 14500,
+    "salario_max": 21500,
+    "tecnologias": [
+      "Go",
+      "gRPC",
+      "PostgreSQL"
+    ],
+    "experiencia_anios": 1,
+    "descripcion": "Te sumarás a un equipo de producto que entrega cada semana y decide junto con diseño qué construir.",
+    "requisitos_extra": "Gusto por escribir pruebas y documentación.",
+    "beneficios": [
+      "Presupuesto anual de capacitación",
+      "30 días de aguinaldo",
+      "Prestaciones de ley y superiores"
+    ],
+    "fecha_publicacion": "2026-10-16",
+    "estado": "publicada"
+  },
+  {
+    "id": 215,
+    "titulo": "Diseñador UX/UI Jr",
+    "rol": "Diseñador UX/UI",
+    "nivel": "Jr",
+    "empresa_id": 11,
+    "modalidad": "remoto",
+    "ciudad": "León, Gto.",
+    "salario_min": 15500,
+    "salario_max": 22000,
+    "tecnologias": [
+      "Figma",
+      "Prototipado",
+      "Design Systems"
+    ],
+    "experiencia_anios": 1,
+    "descripcion": "Participarás en la migración de sistemas heredados hacia una arquitectura moderna, documentando cada decisión.",
+    "requisitos_extra": "Conocimientos básicos de accesibilidad web.",
+    "beneficios": [
+      "Prestaciones de ley y superiores",
+      "Horario flexible",
+      "30 días de aguinaldo"
+    ],
+    "fecha_publicacion": "2026-10-14",
+    "estado": "publicada"
+  },
+  {
+    "id": 132,
+    "titulo": "Diseñador UX/UI Jr",
+    "rol": "Diseñador UX/UI",
+    "nivel": "Jr",
+    "empresa_id": 12,
+    "modalidad": "hibrido",
+    "ciudad": "Tijuana, B.C.",
+    "salario_min": 19000,
+    "salario_max": 29500,
+    "tecnologias": [
+      "Figma",
+      "Prototipado",
+      "Design Systems"
+    ],
+    "experiencia_anios": 0,
+    "descripcion": "Te sumarás a un equipo de producto que entrega cada semana y decide junto con diseño qué construir.",
+    "requisitos_extra": "Inglés intermedio para leer documentación.",
+    "beneficios": [
+      "Seguro de gastos médicos mayores",
+      "Horario flexible",
+      "Equipo de cómputo"
+    ],
+    "fecha_publicacion": "2026-10-13",
+    "estado": "publicada"
+  },
+  {
+    "id": 166,
+    "titulo": "Desarrollador Backend Jr",
+    "rol": "Desarrollador Backend",
+    "nivel": "Jr",
+    "empresa_id": 3,
+    "modalidad": "remoto",
+    "ciudad": "Mérida, Yuc.",
+    "salario_min": 19000,
+    "salario_max": 33500,
+    "tecnologias": [
+      "Go",
+      "gRPC",
+      "PostgreSQL"
+    ],
+    "experiencia_anios": 2,
+    "descripcion": "Te sumarás a un equipo de producto que entrega cada semana y decide junto con diseño qué construir.",
+    "requisitos_extra": "Gusto por escribir pruebas y documentación.",
+    "beneficios": [
+      "Seguro de gastos médicos mayores",
+      "Prestaciones de ley y superiores",
+      "30 días de aguinaldo"
+    ],
+    "fecha_publicacion": "2026-10-11",
+    "estado": "publicada"
+  },
+  {
+    "id": 170,
+    "titulo": "Ingeniero DevOps Sr",
+    "rol": "Ingeniero DevOps",
+    "nivel": "Sr",
+    "empresa_id": 12,
+    "modalidad": "presencial",
+    "ciudad": "Aguascalientes, Ags.",
+    "salario_min": 61000,
+    "salario_max": 75500,
+    "tecnologias": [
+      "Kubernetes",
+      "Terraform",
+      "AWS"
+    ],
+    "experiencia_anios": 6,
+    "descripcion": "Trabajarás en un equipo pequeño donde tu código llega a producción el mismo día y escuchas a los usuarios de primera mano.",
+    "requisitos_extra": "Disponibilidad para visitar la oficina una vez al mes.",
+    "beneficios": [
+      "Equipo de cómputo",
+      "Prestaciones de ley y superiores",
+      "Horario flexible"
+    ],
+    "fecha_publicacion": "2026-10-11",
+    "estado": "publicada"
+  }
+]

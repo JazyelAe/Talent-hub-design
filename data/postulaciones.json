@@ -1,0 +1,96 @@
+[
+  {
+    "id": 1,
+    "vacante_id": 115,
+    "estado": "enviada",
+    "fecha": "2026-11-02",
+    "eventos": [
+      {
+        "tipo": "enviada",
+        "fecha": "2026-11-02"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "vacante_id": 192,
+    "estado": "en_revision",
+    "fecha": "2026-10-31",
+    "eventos": [
+      {
+        "tipo": "enviada",
+        "fecha": "2026-10-31"
+      },
+      {
+        "tipo": "en_revision",
+        "fecha": "2026-11-16"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "vacante_id": 256,
+    "estado": "en_revision",
+    "fecha": "2026-10-29",
+    "eventos": [
+      {
+        "tipo": "enviada",
+        "fecha": "2026-10-29"
+      },
+      {
+        "tipo": "en_revision",
+        "fecha": "2026-11-12"
+      },
+      {
+        "tipo": "entrevista",
+        "fecha": "2026-11-15",
+        "fecha_entrevista": "2026-11-21T11:00"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "vacante_id": 166,
+    "estado": "aceptada",
+    "fecha": "2026-10-27",
+    "eventos": [
+      {
+        "tipo": "enviada",
+        "fecha": "2026-10-27"
+      },
+      {
+        "tipo": "en_revision",
+        "fecha": "2026-11-09"
+      },
+      {
+        "tipo": "entrevista",
+        "fecha": "2026-11-12",
+        "fecha_entrevista": "2026-11-21T11:00"
+      },
+      {
+        "tipo": "aceptada",
+        "fecha": "2026-11-16"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "vacante_id": 158,
+    "estado": "rechazada",
+    "fecha": "2026-10-25",
+    "eventos": [
+      {
+        "tipo": "enviada",
+        "fecha": "2026-10-25"
+      },
+      {
+        "tipo": "en_revision",
+        "fecha": "2026-11-06"
+      },
+      {
+        "tipo": "rechazada",
+        "fecha": "2026-11-10"
+      }
+    ]
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "empresas": [
+    {
+      "id": "empresa-gratis",
+      "nombre": "Gratis",
+      "lema": "Publica tus primeras vacantes sin costo",
+      "precio": 0,
+      "rasgos": [
+        "Hasta 500 candidatos por vacante",
+        "Revisión de cada vacante",
+        "Panel de postulaciones"
+      ]
+    },
+    {
+      "id": "empresa-pro",
+      "nombre": "Pro",
+      "lema": "Encuentra talento más rápido",
+      "precio": 399,
+      "destacado": true,
+      "rasgos": [
+        "Hasta 5,000 candidatos por vacante",
+        "Todo lo de Gratis",
+        "Agenda de entrevistas"
+      ]
+    },
+    {
+      "id": "empresa-enterprise",
+      "nombre": "Enterprise",
+      "lema": "La solución completa para reclutamiento",
+      "precio": 1199,
+      "rasgos": [
+        "Hasta 10,000 candidatos por vacante",
+        "Todo lo de Pro",
+        "Varias personas en tu equipo"
+      ]
+    }
+  ],
+  "aspirantes": [
+    {
+      "id": "aspirante-gratis",
+      "nombre": "Gratis",
+      "lema": "Empieza a explorar oportunidades de TI",
+      "precio": 0,
+      "rasgos": [
+        "50 postulaciones por día",
+        "Acceso completo al catálogo de TI"
+      ]
+    },
+    {
+      "id": "aspirante-premium",
+      "nombre": "Premium",
+      "lema": "Maximiza tus oportunidades",
+      "precio": 129,
+      "destacado": true,
+      "rasgos": [
+        "Postulaciones ilimitadas",
+        "Acceso completo al catálogo de TI",
+        "Avisos al instante"
+      ]
+    }
+  ]
+}
