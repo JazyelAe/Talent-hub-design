@@ -17,6 +17,13 @@
   </style>
 </head>
 <body data-page="componentes">
+  <header class="band band--explorar">
+    <div class="container">
+      <nav class="migas" aria-label="Migas de pan"><ol><li><a href="index.html">Inicio</a></li><li><span aria-current="page">Guía de componentes</span></li></ol></nav>
+      <h1 class="band__title">Bandas y tarjetas</h1>
+      <p class="band__lead">Banda «explorar»: halo teal arriba a la derecha y velo al 25%.</p>
+    </div>
+  </header>
   <main id="contenido" class="container muestra" tabindex="-1">
     <header>
       <p class="eyebrow">Sistema de diseño</p>
@@ -98,6 +105,14 @@
         <p class="aviso aviso--warn"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-warning-circle"></use></svg><span><strong>Cambios sin guardar.</strong> Guarda antes de salir.</span></p>
         <div class="cluster"><button class="btn btn--primary" type="submit"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Validar</button></div>
       </form>
+    </section>
+    <section aria-labelledby="t-card">
+      <h2 id="t-card">Tarjetas</h2>
+      <div class="grid grid--3">
+        <article class="card"><h3>Opaca (canvas)</h3><p style="color:var(--ink-2)">Tablas y pantallas de uso diario.</p></article>
+        <article class="card card--glass"><h3>Vidrio</h3><p style="color:var(--ink-2)">Translúcida con desenfoque y filo superior.</p></article>
+        <article class="card card--glass card--interactive"><h3>Interactiva</h3><p style="color:var(--ink-2)">Se eleva sin sombra al pasar el cursor.</p></article>
+      </div>
     </section>
   </main>
   <script type="module" src="js/layout.js"></script>

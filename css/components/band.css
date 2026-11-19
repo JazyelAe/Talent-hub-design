@@ -1,0 +1,130 @@
+/* Banda oscura bajo la nav (PageHeader) y tarjetas / paneles de vidrio.
+   Cada familia combina velo, halo y altura distintos, para que ninguna página
+   se lea igual que su vecina (DESIGN.md › Page families). */
+@layer components {
+  .band {
+    --band-pt: 36px;
+    --band-pb: 40px;
+    position: relative;
+    isolation: isolate;
+    margin-top: calc(var(--nav-h) * -1);            /* la banda pasa por debajo de la nav de vidrio */
+    padding: calc(var(--nav-h) + var(--band-pt)) 0 var(--band-pb);
+    background: var(--night);
+    overflow: clip;
+  }
+  /* Halo de la familia */
+  .band::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    pointer-events: none;
+  }
+  /* Velo: franjas suaves de azul ultramar que se desvanecen hacia abajo
+     (aproximación en CSS del velo WebGL del original) */
+  .band::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    pointer-events: none;
+    opacity: var(--velo, 0);
+    background:
+      linear-gradient(115deg, transparent 30%, rgba(70, 100, 255, 0.95) 42%, transparent 52%),
+      linear-gradient(105deg, transparent 52%, rgba(70, 100, 255, 0.6) 60%, transparent 70%);
+    filter: blur(40px);
+    -webkit-mask: linear-gradient(to bottom, #000 30%, transparent 100%);
+    mask: linear-gradient(to bottom, #000 30%, transparent 100%);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .band::after { animation: velo 18s ease-in-out infinite alternate; }
+  }
+  @keyframes velo { to { transform: translateX(6%); } }
+
+  .band__title { font-size: var(--fs-h1-page); }
+  .band__lead { margin-top: var(--sp-2); color: var(--ink-2); font-size: var(--fs-body); }
+
+  .band--explorar { --velo: 0.25; }
+  .band--explorar::before {
+    background: radial-gradient(52rem 32rem at 100% -10%, rgba(45, 212, 191, 0.22), transparent 70%);
+  }
+  .band--ficha { --velo: 0.25; --band-pt: 48px; --band-pb: 140px; }
+  .band--ficha::before {
+    background: radial-gradient(48rem 30rem at 18% 0%, rgba(244, 114, 182, 0.13), transparent 70%);
+  }
+  .band--venta { --velo: 0.45; --band-pt: 72px; --band-pb: 120px; text-align: center; }
+  .band--venta::before {
+    background: radial-gradient(70rem 30rem at 50% 0%, rgba(51, 85, 255, 0.28), transparent 70%);
+  }
+  .band--venta .band__title { font-size: var(--fs-h1); }
+  .band--trabajo { --band-pt: 28px; --band-pb: 32px; }
+  .band--trabajo::before {
+    background: radial-gradient(44rem 24rem at 0% 0%, rgba(51, 85, 255, 0.14), transparent 70%);
+  }
+  .band--trabajo .band__title { font-size: clamp(1.75rem, 1.5rem + 1vw, 2.125rem); }
+  .band--lectura { --band-pt: 40px; border-bottom: 1px solid var(--hairline); }
+  .band--lectura::before { background: none; }
+
+  /* Migas de pan */
+  .migas { margin-bottom: var(--sp-4); }
+  .migas ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    list-style: none;
+    font-size: var(--fs-ui);
+    color: var(--muted-d);
+  }
+  .migas li { display: inline-flex; align-items: center; gap: 6px; }
+  .migas li + li::before {
+    content: "";
+    width: 6px; height: 8px;
+    background: currentColor;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    opacity: 0.7;
+  }
+  .migas a:hover { color: var(--ink); }
+  .migas [aria-current="page"] { color: var(--ink-2); }
+
+  /* ── Tarjetas ────────────────────────────────────────────────────── */
+  .card {
+    position: relative;
+    border-radius: var(--r-card);
+    padding: var(--sp-7);
+    background: var(--canvas);
+    border: 1px solid var(--hairline);
+  }
+  .card--glass, .glass-panel {
+    background: var(--glass);
+    border: 1px solid var(--edge);
+    box-shadow: var(--shadow-glass-edge);
+    backdrop-filter: var(--blur-card);
+    -webkit-backdrop-filter: var(--blur-card);
+  }
+  .glass-panel { border-radius: var(--r-card); padding: var(--sp-7); }
+  .card--compact { padding: var(--sp-5); }
+  @media (max-width: 639px) {
+    .card, .glass-panel { padding: var(--sp-6); }
+  }
+  /* Interactiva: se eleva con borde, fondo y desplazamiento; nunca con sombra */
+  .card--interactive {
+    transition: transform var(--dur-base) var(--ease), background-color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+  }
+  @media (hover: hover) {
+    .card--interactive:hover {
+      transform: translateY(-2px);
+      background: var(--glass-hover);
+      border-color: var(--hairline-strong);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) { .card--interactive:hover { transform: none; } }
+
+  /* Paneles montados sobre el borde de la banda */
+  .overlap { margin-top: -96px; position: relative; }
+  .overlap-sm { margin-top: -52px; position: relative; }
+
+  .card__title { font-size: var(--fs-h3); font-weight: var(--fw-demi); letter-spacing: var(--ls-h3); line-height: 1.33; }
+  .card__divider { height: 1px; background: var(--hairline); margin-block: var(--sp-5); border: 0; }
+}
