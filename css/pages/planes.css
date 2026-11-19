@@ -1,0 +1,46 @@
+/* Planes (familia «venta»: título centrado, banda alta, velo al 45%) */
+@layer pages {
+  .planes { max-width: calc(1100px + 2 * var(--gutter)); padding-bottom: var(--sp-20); }
+
+  .garantias {
+    display: grid;
+    gap: var(--sp-4);
+    padding: var(--sp-6) var(--sp-7);
+    background: var(--veil-panel);
+  }
+  @media (min-width: 768px) { .garantias { grid-template-columns: repeat(3, 1fr); } }
+  .garantias li { display: flex; align-items: center; gap: var(--sp-3); font-weight: var(--fw-mid); flex-wrap: wrap; }
+  .garantias__icono {
+    display: grid; place-items: center; width: 40px; height: 40px; border-radius: var(--r-pill);
+    border: 1px solid var(--hairline); background: var(--glass-soft); color: var(--accent-on-dark);
+  }
+  .garantias__nota { font-size: var(--fs-caption); font-weight: var(--fw-book); color: var(--muted); }
+
+  .planes__grupo { margin-top: var(--sp-16); }
+  .planes__grupo h2 { margin-bottom: var(--sp-6); }
+  .planes__grid { display: grid; gap: var(--sp-5); }
+  @media (min-width: 768px) { .planes__grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 768px) { .planes__grid--2 { grid-template-columns: repeat(2, 1fr); max-width: 740px; } }
+
+  .plan {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-4);
+    padding: var(--sp-7);
+    border-radius: var(--r-card);
+    background: var(--glass);
+    border: 1px solid var(--edge);
+    box-shadow: var(--shadow-glass-edge);
+  }
+  .plan--actual { border-color: rgba(157, 176, 255, 0.55); }
+  .plan__nombre { font-size: var(--fs-h3); font-weight: var(--fw-demi); text-transform: uppercase; letter-spacing: -0.01em; }
+  .plan__lema { margin-top: 4px; font-size: var(--fs-ui); color: var(--ink-2); }
+  .plan__precio { display: flex; align-items: baseline; gap: 8px; padding-bottom: var(--sp-5); border-bottom: 1px solid var(--hairline); }
+  .plan__precio strong { font-size: 2.25rem; font-weight: var(--fw-demi); letter-spacing: -0.03em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .plan__precio span { font-size: var(--fs-ui); color: var(--muted); }
+  .plan__rasgos { display: grid; gap: var(--sp-3); flex: 1; align-content: start; }
+  .plan__rasgos li { display: flex; gap: 10px; align-items: flex-start; font-size: var(--fs-ui); color: var(--ink); }
+  .plan__rasgos .icon { margin-top: 3px; color: var(--accent-on-dark); width: 15px; height: 15px; }
+  .plan .btn { margin-top: var(--sp-2); }
+  .plan__badge { align-self: flex-start; }
+}
