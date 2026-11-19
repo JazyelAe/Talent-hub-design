@@ -2,6 +2,7 @@
 // Cada página declara su sección en <body data-page="vacantes"> para marcar el enlace activo.
 import { ROOT, html, raw, icon, $ } from "./utils.js";
 import { sesion, store, USUARIO_DEMO } from "./store.js";
+import "./components/chispas.js";
 
 const LINKS = {
   visitante: [

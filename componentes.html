@@ -32,6 +32,26 @@
       <p>Cuerpo 16px · DM Sans 460. <a class="link" href="#">Enlace en texto</a>.</p>
       <p style="font-size:var(--fs-caption);color:var(--muted)">Metadato 13px en muted</p>
     </section>
+    <section aria-labelledby="t-btn">
+      <h2 id="t-btn">Botones</h2>
+      <div class="cluster">
+        <button class="btn btn--primary btn--destacado" type="button"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-magnifying-glass"></use></svg>Buscar vacantes</button>
+        <button class="btn btn--primary" type="button"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-paper-plane-tilt"></use></svg>Postularme</button>
+        <button class="btn btn--ghost" type="button"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-pencil-simple"></use></svg>Editar</button>
+        <button class="btn btn--ghost" type="button">Cancelar</button>
+        <button class="btn btn--ghost btn--ok" type="button"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Aceptar</button>
+        <button class="btn btn--ghost btn--danger-text" type="button"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-x"></use></svg>Rechazar</button>
+        <button class="btn btn--danger" type="button"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-trash"></use></svg>Eliminar vacante</button>
+      </div>
+      <div class="cluster">
+        <button class="btn btn--primary btn--sm" type="button">Registrarse</button>
+        <button class="btn btn--ghost btn--sm" type="button"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-plus"></use></svg>Pequeño</button>
+        <button class="btn btn--primary" type="button" disabled>Deshabilitado</button>
+        <button class="btn btn--primary" type="button" aria-busy="true"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-clockwise"></use></svg>Guardando…</button>
+        <button class="btn btn--ghost btn--icon" type="button" aria-label="Cerrar"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-x"></use></svg></button>
+        <button class="btn btn--text" type="button">Botón de texto</button>
+      </div>
+    </section>
   </main>
   <script type="module" src="js/layout.js"></script>
 </body>
