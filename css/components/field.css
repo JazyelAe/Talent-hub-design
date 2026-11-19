@@ -42,7 +42,7 @@
     font-size: var(--fs-body);
     transition: border-color var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease), background-color var(--dur-fast) var(--ease);
   }
-  .control > .icon + .input, .control > .icon + .select { padding-left: 44px; }
+  .control > .icon ~ .input, .control > .icon ~ .select { padding-left: 44px; }
   .textarea { min-height: 120px; resize: vertical; line-height: 1.5; }
   .input:hover, .select:hover, .textarea:hover { border-color: var(--hairline-strong); }
   .input:focus, .select:focus, .textarea:focus {
