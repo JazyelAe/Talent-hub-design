@@ -31,7 +31,8 @@
 
   /* Reserva de la columna del aviso de la app en escritorio (ver app-promo) */
   @media (min-width: 1024px) {
-    body.has-promo main,
-    body.has-promo .site-footer { padding-right: var(--promo-col); transition: padding var(--dur-base) var(--ease); }
+    body main, body .site-footer { transition: padding var(--dur-base) var(--ease); }
+    body.has-promo:not(.promo-min) main,
+    body.has-promo:not(.promo-min) .site-footer { padding-right: var(--promo-col); }
   }
 }
