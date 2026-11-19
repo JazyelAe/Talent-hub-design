@@ -114,12 +114,20 @@
         <article class="card card--glass card--interactive"><h3>Interactiva</h3><p style="color:var(--ink-2)">Se eleva sin sombra al pasar el cursor.</p></article>
       </div>
     </section>
+    <section aria-labelledby="t-vcard">
+      <h2 id="t-vcard">Tarjeta de vacante</h2>
+      <div class="grid grid--2" id="muestra-vcards"></div>
+    </section>
   </main>
   <script type="module" src="js/layout.js"></script>
   <script type="module">
     import { validarFormulario, contadores, mostrarPassword } from "./js/components/form.js";
     validarFormulario(document.getElementById("form-muestra"), () => alert("Formulario válido (no se envía nada)."));
     contadores(); mostrarPassword();
+    import { api } from "./js/api.js";
+    import { vacanteCard } from "./js/components/vacante-card.js";
+    const vs = await api.vacantes();
+    document.getElementById("muestra-vcards").innerHTML = vs.slice(0, 4).map((v) => vacanteCard(v, { nivelTitulo: "h3" })).join("");
   </script>
 </body>
 </html>

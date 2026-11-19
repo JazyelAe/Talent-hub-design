@@ -1,0 +1,80 @@
+/* Tarjeta de vacante: vidrio, iniciales, salario como cifra principal */
+@layer components {
+  .vcard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-4);
+    padding: var(--sp-7);
+    border-radius: var(--r-card);
+    background: var(--glass);
+    border: 1px solid var(--edge);
+    box-shadow: var(--shadow-glass-edge);
+    backdrop-filter: var(--blur-card);
+    -webkit-backdrop-filter: var(--blur-card);
+    overflow: hidden;
+    transition: transform var(--dur-base) var(--ease), background-color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+  }
+  @media (max-width: 639px) { .vcard { padding: var(--sp-6) var(--sp-5); } }
+
+  .vcard__head { display: flex; gap: var(--sp-4); align-items: flex-start; }
+  .vcard__head .iniciales { width: 44px; height: 44px; font-size: var(--fs-sm); }
+  .vcard__id { flex: 1; min-width: 0; }
+  .vcard__title { font-size: var(--fs-card-title); }
+  /* El enlace del título cubre toda la tarjeta: un solo enlace para lectores de pantalla */
+  .vcard__title a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+  .vcard__title a:focus-visible { outline: none; }
+  .vcard:has(.vcard__title a:focus-visible) { box-shadow: var(--shadow-glass-edge), 0 0 0 2px var(--accent-on-dark); }
+  .vcard__empresa { margin-top: var(--sp-1); font-size: var(--fs-ui); color: var(--muted); }
+
+  .vcard__salario { font-size: 1.25rem; font-weight: var(--fw-demi); line-height: 1.5; font-variant-numeric: tabular-nums; }
+  .vcard__salario small { margin-left: 6px; font-size: var(--fs-caption); font-weight: var(--fw-book); color: var(--muted); }
+
+  .vcard__desc {
+    font-size: var(--fs-sm);
+    line-height: 1.625;
+    color: var(--ink-2);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .vcard__foot {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-3) var(--sp-4);
+    padding-top: var(--sp-4);
+    border-top: 1px solid var(--hairline);
+  }
+  .vcard__techs { display: flex; flex-wrap: wrap; gap: var(--sp-2); padding: 0; list-style: none; }
+  .vcard__meta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-3); font-size: var(--fs-caption); color: var(--muted); }
+  .vcard__meta span { display: inline-flex; align-items: center; gap: var(--sp-1); }
+  .vcard__meta .icon { width: 13px; height: 13px; }
+  .vcard__meta .tag { display: none; }
+  @media (max-width: 479px) {
+    .vcard__head > .tag { display: none; }
+    .vcard__meta .tag { display: inline-flex; }
+  }
+
+  /* Hover: se eleva y un reflejo cruza una vez (solo con puntero) */
+  @media (hover: hover) {
+    .vcard:hover { transform: translateY(-2px); background: var(--glass-hover); border-color: var(--hairline-strong); }
+  }
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .vcard::before {
+      content: "";
+      position: absolute;
+      inset: -50% auto -50% -60%;
+      width: 40%;
+      transform: translateX(-100%) rotate(12deg);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.10), transparent);
+      pointer-events: none;
+    }
+    .vcard:hover::before { transform: translateX(520%) rotate(12deg); transition: transform 0.85s var(--ease); }
+  }
+  @media (prefers-reduced-motion: reduce) { .vcard:hover { transform: none; } }
+}
