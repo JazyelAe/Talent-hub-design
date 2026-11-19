@@ -1,8 +1,8 @@
 // Listado de vacantes: búsqueda en vivo y filtros combinables sincronizados con la URL.
-import { $, $$, html, formatoMXN, norm, debounce } from "../utils.js";
+import { $, $$, html, raw, icon, formatoMXN, norm, debounce } from "../utils.js";
 import { api } from "../api.js";
 import { vacanteCard } from "../components/vacante-card.js";
-import { cargarCon } from "../components/estados.js";
+import { cargarCon, estadoVacio } from "../components/estados.js";
 
 const POR_PAGINA = 12;
 const form = $("#filtros");
@@ -72,9 +72,71 @@ function pintar() {
   contador.textContent = filtrosActivos()
     ? `${res.length} de ${total} vacantes`
     : `${total} vacantes abiertas`;
-  lista.innerHTML = res.slice(0, POR_PAGINA).map((v) => vacanteCard(v)).join("");
+  const paginas = Math.max(1, Math.ceil(res.length / POR_PAGINA));
+  estado.pagina = Math.min(estado.pagina, paginas);
+  const desde = (estado.pagina - 1) * POR_PAGINA;
+  if (!res.length) {
+    lista.innerHTML = estadoVacio({
+      titulo: "Ninguna vacante coincide",
+      texto: "Prueba con otros términos, otra ciudad o un rango de sueldo más amplio.",
+      accion: html`<button class="btn btn--ghost" type="button" data-limpiar>${icon("x")}Limpiar filtros</button>`,
+    });
+  } else {
+    lista.innerHTML = res.slice(desde, desde + POR_PAGINA).map((v) => vacanteCard(v)).join("");
+  }
+  pintarPaginacion(res.length, paginas, desde);
   sincronizarControles();
 }
+
+// Paginación numerada: primera, última, la actual y sus vecinas; puntos suspensivos en medio
+function numeros(actual, total) {
+  const set = new Set([1, total, actual - 1, actual, actual + 1].filter((n) => n >= 1 && n <= total));
+  const orden = [...set].sort((a, b) => a - b);
+  const out = [];
+  orden.forEach((n, i) => { if (i && n - orden[i - 1] > 1) out.push("…"); out.push(n); });
+  return out;
+}
+
+function enlacePagina(n) {
+  const p = new URLSearchParams(location.search);
+  if (n > 1) p.set("pagina", n); else p.delete("pagina");
+  return `?${p}`;
+}
+
+function pintarPaginacion(total, paginas, desde) {
+  const nav = $("#paginacion");
+  nav.hidden = !total;
+  if (!total) return;
+  const a = estado.pagina;
+  const hasta = Math.min(desde + POR_PAGINA, total);
+  const flecha = (n, txt, ico, rel) => n < 1 || n > paginas
+    ? html`<li><span class="pag pag--flecha" aria-disabled="true">${rel === "prev" ? icon(ico) : ""}<span>${txt}</span>${rel === "next" ? icon(ico) : ""}</span></li>`
+    : html`<li><a class="pag pag--flecha" href="${enlacePagina(n)}" data-pagina="${n}" rel="${rel}">${rel === "prev" ? icon(ico) : ""}<span>${txt}</span>${rel === "next" ? icon(ico) : ""}</a></li>`;
+  nav.innerHTML = html`
+    <p class="paginacion__resumen">Ves ${desde + 1}–${hasta} de ${total} vacantes</p>
+    ${paginas > 1 ? raw(html`<ul>
+      ${raw(flecha(a - 1, "Anterior", "caret-left", "prev"))}
+      ${numeros(a, paginas).map((n) => raw(n === "…"
+        ? `<li><span class="pag__puntos" aria-hidden="true">…</span></li>`
+        : html`<li><a class="pag" href="${enlacePagina(n)}" data-pagina="${n}" aria-label="Página ${n}"${n === a ? raw(' aria-current="page"') : ""}>${n}</a></li>`))}
+      ${raw(flecha(a + 1, "Siguiente", "caret-right", "next"))}
+    </ul>`) : ""}`;
+}
+
+// Cambiar de página: el foco va al encabezado de resultados y la vista sube a la lista
+$("#paginacion").addEventListener("click", (e) => {
+  const a = e.target.closest("[data-pagina]");
+  if (!a) return;
+  e.preventDefault();
+  estado.pagina = Number(a.dataset.pagina);
+  escribirURL({ reemplazar: false });
+  pintar();
+  const titulo = $("#res-titulo");
+  titulo.focus({ preventScroll: true });
+  // sube hasta donde empieza la barra de filtros (la banda queda justo arriba)
+  scrollTo({ top: $(".band").getBoundingClientRect().bottom + scrollY - 64 });
+});
+lista.addEventListener("click", (e) => { if (e.target.closest("[data-limpiar]")) $("#limpiar").click(); });
 
 function sincronizarControles() {
   $$("[data-modalidad]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.modalidad === estado.modalidad)));
