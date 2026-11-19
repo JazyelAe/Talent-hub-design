@@ -1,0 +1,57 @@
+/* Diálogo modal y botón de mantener presionado */
+@layer components {
+  .dialog {
+    width: min(560px, calc(100vw - 32px));
+    max-height: calc(100dvh - 48px);
+    margin: auto;
+    padding: 0;
+    border: 1px solid var(--hairline-strong);
+    border-radius: var(--r-card);
+    background: var(--elevated);
+    color: var(--ink);
+    box-shadow: var(--shadow-glass-edge);
+    overflow: auto;
+  }
+  .dialog::backdrop {
+    background: rgba(5, 5, 6, 0.7);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .dialog[open] { animation: dlg-in 0.32s var(--ease); }
+  }
+  @keyframes dlg-in { from { transform: translateY(16px) scale(0.98); } }
+  .dialog--ancho { width: min(720px, calc(100vw - 32px)); }
+
+  .dialog__caja { display: grid; gap: var(--sp-5); padding: var(--sp-7); }
+  @media (max-width: 639px) { .dialog__caja { padding: var(--sp-6) var(--sp-5); } }
+  .dialog__head { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--sp-4); }
+  .dialog__titulo { font-family: var(--font-sans); font-size: var(--fs-h3); font-weight: var(--fw-demi); letter-spacing: var(--ls-h3); line-height: 1.33; }
+  .dialog__cuerpo { color: var(--ink-2); }
+  .dialog__cuerpo > * + * { margin-top: var(--sp-4); }
+  .dialog__acciones { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--sp-3); }
+  @media (max-width: 479px) { .dialog__acciones .btn { flex: 1; } }
+
+  /* Mantener presionado: la capa roja cruza la píldora según --progreso */
+  .btn-mantener {
+    --progreso: 0;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+  }
+  .btn-mantener::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(220, 38, 38, 0.55);
+    transform-origin: left;
+    transform: scaleX(var(--progreso));
+  }
+  @media (prefers-reduced-motion: reduce) {
+    /* sin desplazamiento: la capa se tiñe en su lugar y el tiempo se mantiene */
+    .btn-mantener::after { transform: none; opacity: var(--progreso); }
+  }
+  .btn-mantener.is-holding { border-color: rgba(248, 113, 113, 0.6); }
+}

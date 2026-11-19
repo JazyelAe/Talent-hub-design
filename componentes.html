@@ -119,6 +119,13 @@
       <p style="color:var(--ink-2)">Estados: <a class="link" href="?demo=lento#t-vcard">carga lenta</a> · <a class="link" href="?demo=error#t-vcard">error</a> · <a class="link" href="?demo=vacio#t-vcard">vacío</a> · <a class="link" href="componentes.html#t-vcard">normal</a> · <button class="btn btn--text" id="btn-toast" type="button">mostrar toast</button></p>
       <div class="grid grid--2" id="muestra-vcards"></div>
     </section>
+    <section aria-labelledby="t-dlg">
+      <h2 id="t-dlg">Diálogo y mantener presionado</h2>
+      <div class="cluster">
+        <button class="btn btn--ghost" type="button" id="btn-dlg"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-up-right"></use></svg>Abrir diálogo</button>
+        <button class="btn btn--ghost btn--danger-text btn-mantener" type="button" id="btn-hold"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-trash"></use></svg>Eliminar vacante</button>
+      </div>
+    </section>
   </main>
   <script type="module" src="js/layout.js"></script>
   <script type="module">
@@ -135,6 +142,14 @@
       pintar: (vs) => { caja.innerHTML = vs.slice(0, 4).map((v) => vacanteCard(v)).join(""); },
       vacio: { titulo: "Ninguna vacante coincide", texto: "Prueba con otros términos, otra ciudad o un sueldo más bajo." },
       error: { titulo: "No pudimos cargar las vacantes" },
+    });
+    import { confirmar } from "./js/components/dialog.js";
+    import { activarMantener } from "./js/components/mantener.js";
+    activarMantener();
+    document.getElementById("btn-dlg").addEventListener("click", () => confirmar({ titulo: "¿Publicar la vacante?", texto: "Un validador la revisará antes de que aparezca en el listado.", aceptar: "Publicar", iconoAceptar: "paper-plane-tilt" }));
+    document.getElementById("btn-hold").addEventListener("mantenido", async () => {
+      const ok = await confirmar({ titulo: "¿Eliminar «Desarrollador Frontend Jr»?", texto: "Se quitará del listado y las 3 personas que se postularon verán que la vacante se cerró.", aceptar: "Eliminar vacante", iconoAceptar: "trash", peligro: true });
+      if (ok) toast("Vacante eliminada");
     });
     document.getElementById("btn-toast").addEventListener("click", () => toast("Postulación enviada", { texto: "Te avisaremos cuando la empresa la revise." }));
   </script>
