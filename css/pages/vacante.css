@@ -1,0 +1,51 @@
+/* Detalle de vacante (familia «ficha») */
+@layer pages {
+  .ficha { max-width: calc(1100px + 2 * var(--gutter)); }
+
+  .membrete { display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--sp-4) var(--sp-6); }
+  .membrete__id { display: flex; gap: var(--sp-4); align-items: flex-start; flex: 1 1 420px; }
+  .membrete__titulo { font-size: var(--fs-h1-page); line-height: 1.15; }
+  .membrete__empresa { margin-top: var(--sp-2); color: var(--ink-2); font-size: var(--fs-body); }
+  /* La cifra usa la cara de texto con cifras tabulares: es dato, no titular */
+  .membrete__salario { text-align: right; margin-left: auto; }
+  .membrete__salario strong {
+    display: block;
+    font-size: clamp(1.375rem, 1.1rem + 0.8vw, 1.5rem);
+    font-weight: var(--fw-demi);
+    font-variant-numeric: tabular-nums;
+  }
+  .membrete__salario span { font-size: var(--fs-caption); color: var(--ink-2); }
+  @media (max-width: 767px) {
+    .membrete__salario { text-align: left; margin-left: 0; flex-basis: 100%; }
+  }
+
+  .ficha__cuerpo {
+    display: grid;
+    gap: var(--sp-5);
+    margin-top: -96px;                          /* los paneles cruzan el borde de la banda */
+    padding-bottom: var(--sp-20);
+    position: relative;
+  }
+  @media (min-width: 1024px) {
+    .ficha__cuerpo { grid-template-columns: minmax(0, 1fr) 340px; align-items: start; }
+    .ficha__lateral { position: sticky; top: calc(var(--nav-h) + 24px); }
+  }
+  .ficha__principal { display: grid; gap: var(--sp-5); }
+  .ficha__principal .glass-panel { background: var(--veil-panel); }
+
+  .resumen { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-3) var(--sp-8); padding: 0; list-style: none; }
+  .resumen li { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); }
+  .resumen .icon { color: var(--muted); }
+
+  .bloque + .bloque { margin-top: var(--sp-6); }
+  .bloque__titulo { display: flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-body); font-weight: var(--fw-demi); }
+  .bloque__titulo .icon { color: var(--accent-on-dark); }
+  .bloque > p, .bloque > ul { margin-top: var(--sp-3); color: var(--ink-2); }
+  .card__title + .bloque { margin-top: var(--sp-6); }
+  .descripcion { margin-top: var(--sp-4); color: var(--ink-2); font-size: var(--fs-sub); line-height: 1.6; }
+
+  .interes { display: grid; gap: var(--sp-4); }
+  .interes__titulo { font-size: var(--fs-body); font-weight: var(--fw-demi); }
+  .interes__nota { font-size: var(--fs-caption); color: var(--muted); text-align: center; }
+  .interes .btn--text { justify-self: center; }
+}

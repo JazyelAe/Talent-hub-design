@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es" data-root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vacante · TalentHub (réplica de portafolio)</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:opsz,wght@9..40,100..1000&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/pages/vacante.css">
+</head>
+<body data-page="vacantes">
+  <main id="contenido" tabindex="-1">
+    <!-- La banda se muestra desde el primer cuadro, con el membrete en skeleton: nada salta al llegar los datos -->
+    <header class="band band--ficha">
+      <div class="container ficha">
+        <nav class="migas" aria-label="Migas de pan">
+          <ol><li><a href="vacantes.html">Vacantes</a></li><li><span aria-current="page" id="miga-actual">Cargando…</span></li></ol>
+        </nav>
+        <div class="membrete" id="membrete" aria-busy="true">
+          <span class="sk sk--circle" style="width:56px;height:56px"></span>
+          <div style="flex:1"><span class="sk" style="width:min(420px,70%);height:38px"></span><span class="sk" style="width:160px;height:18px;margin-top:12px"></span></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container ficha ficha__cuerpo" id="cuerpo">
+      <div class="ficha__principal" id="principal">
+        <div class="glass-panel"><span class="sk" style="height:24px;width:60%"></span></div>
+        <div class="glass-panel"><span class="sk" style="height:26px;width:30%"></span><span class="sk" style="height:16px;width:80%;margin-top:20px"></span><span class="sk" style="height:16px;width:50%;margin-top:12px"></span></div>
+      </div>
+      <aside class="ficha__lateral" id="lateral" aria-label="Postulación"></aside>
+    </div>
+  </main>
+  <script type="module" src="js/layout.js"></script>
+  <script type="module" src="js/pages/vacante.js"></script>
+</body>
+</html>
