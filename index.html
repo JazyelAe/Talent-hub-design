@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es" data-root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TalentHub · Vacantes de TI con sueldo visible (réplica de portafolio)</title>
+  <meta name="description" content="Réplica de portafolio de TalentHub México: vacantes de TI con el rango salarial a la vista. Datos ficticios.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:opsz,wght@9..40,100..1000&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/pages/inicio.css">
+</head>
+<body data-page="inicio">
+  <main id="contenido" tabindex="-1">
+    <!-- Hero: un titular, tres promesas con icono y la búsqueda en un panel de vidrio -->
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="hero__inner">
+        <h1 class="hero__titulo display" id="hero-titulo">
+          <span class="sr-only">Tu siguiente empleo en TI ya trae el sueldo</span>
+          <span aria-hidden="true">Tu siguiente empleo<br>en <span class="giro"><span class="giro__palabra">TI</span></span><br>ya trae el sueldo</span>
+        </h1>
+        <ul class="hero__claims" role="list">
+          <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-currency-dollar"></use></svg>Sueldo siempre visible</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-shield-check"></use></svg>Vacantes revisadas</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-bell"></use></svg>Avisos de tu proceso</li>
+        </ul>
+        <div class="buscador">
+          <form class="buscador__form" action="vacantes.html" method="get" role="search" aria-label="Buscar vacantes">
+            <div class="buscador__campo">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-magnifying-glass"></use></svg>
+              <label class="sr-only" for="b-q">Puesto o tecnología</label>
+              <input id="b-q" name="q" type="search" placeholder="Puesto o tecnología" autocomplete="off">
+            </div>
+            <div class="buscador__campo">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-map-pin"></use></svg>
+              <label class="sr-only" for="b-lugar">Ciudad o remoto</label>
+              <input id="b-lugar" name="lugar" type="search" placeholder="Ciudad o remoto" autocomplete="off">
+            </div>
+            <button class="btn btn--primary btn--destacado" type="submit">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-magnifying-glass"></use></svg>Buscar vacantes
+            </button>
+          </form>
+          <nav class="buscador__rapidas" aria-label="Búsquedas rápidas"><ul class="cluster" role="list" id="rapidas"></ul></nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Busca por stack, ciudad o modalidad: carrusel con datos reales de la demo -->
+    <section class="section section--surface stacks" aria-labelledby="stacks-titulo">
+      <div class="container">
+        <h2 id="stacks-titulo">Busca por stack, ciudad o modalidad</h2>
+        <p class="seccion__lead">Cada número es lo que vas a encontrar al entrar. En el stack va el rango de sueldo que pagan sus vacantes.</p>
+      </div>
+      <div class="carrusel" id="carrusel">
+        <div class="carrusel__pista" id="carrusel-pista" tabindex="0" role="region" aria-label="Búsquedas por stack, ciudad o modalidad" aria-describedby="carrusel-ayuda">
+          <div class="carrusel__sk sk"></div>
+        </div>
+        <p class="sr-only" id="carrusel-ayuda">Usa las flechas izquierda y derecha para recorrer las tarjetas.</p>
+        <div class="carrusel__ctrl container">
+          <button class="btn btn--ghost btn--icon" type="button" data-dir="-1" aria-label="Anterior" aria-controls="carrusel-pista"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-caret-left"></use></svg></button>
+          <button class="btn btn--ghost btn--icon" type="button" data-dir="1" aria-label="Siguiente" aria-controls="carrusel-pista"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-caret-right"></use></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Para quien busca: pasos + el panel "Mis postulaciones" marcado como ejemplo -->
+    <section class="section pasos-sec" aria-labelledby="pasos-titulo">
+      <div class="container split">
+        <div>
+          <h2 id="pasos-titulo">De la búsqueda a la respuesta, sin adivinar</h2>
+          <ol class="pasos" role="list">
+            <li class="paso">
+              <span class="paso__icono"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-eye"></use></svg></span>
+              <div><h3>Buscas con el sueldo a la vista</h3><p>Toda vacante publica su rango. Filtra por stack, ciudad, nivel o modalidad.</p></div>
+            </li>
+            <li class="paso">
+              <span class="paso__icono"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-paper-plane-tilt"></use></svg></span>
+              <div><h3>Te postulas desde la vacante</h3><p>Tu perfil y tu CV van con la postulación; no llenas un formulario cada vez.</p></div>
+            </li>
+            <li class="paso">
+              <span class="paso__icono"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-bell"></use></svg></span>
+              <div><h3>Sigues tu proceso</h3><p>Ves en qué punto va cada postulación y te avisamos cuando cambia.</p></div>
+            </li>
+          </ol>
+          <div class="cluster" style="margin-top:var(--sp-8)">
+            <a class="btn btn--primary" href="registro.html"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-user-plus"></use></svg>Crea tu cuenta</a>
+            <a class="btn btn--ghost" href="vacantes.html"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg>Ver vacantes</a>
+          </div>
+        </div>
+        <figure class="panel-ejemplo card card--glass">
+          <h3 class="panel-ejemplo__titulo">Mis postulaciones</h3>
+          <ul class="panel-ejemplo__lista" role="list" id="ejemplo-post"></ul>
+          <figcaption>Vista de ejemplo de tu panel</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Para empresas: en espejo, una vacante publicada a la izquierda y el argumento a la derecha -->
+    <section class="section banda-empresas" aria-labelledby="empresas-titulo">
+      <div class="container split">
+        <figure class="banda-empresas__muestra">
+          <div id="vacante-muestra"><div class="vcard sk-card"><span class="sk" style="height:160px"></span></div></div>
+          <figcaption>Así se ve una vacante publicada</figcaption>
+        </figure>
+        <div>
+          <h2 id="empresas-titulo">¿Contratas? Publica gratis</h2>
+          <p class="seccion__lead">Llega a gente de TI que ya sabe cuánto pagas, porque aquí el sueldo siempre va a la vista.</p>
+          <ul class="checks" role="list">
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-buildings"></use></svg>Publicas sin costo y sin tarjeta</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-shield-check"></use></svg>Un validador revisa cada vacante antes de que salga</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-tray"></use></svg>Recibes y respondes las postulaciones desde tu panel</li>
+          </ul>
+          <div class="cluster" style="margin-top:var(--sp-8)">
+            <a class="btn btn--primary" href="empresas.html"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg>Conoce TalentHub para empresas</a>
+            <a class="btn btn--ghost" href="planes.html"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg>Ver planes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="js/layout.js"></script>
+  <script type="module" src="js/pages/inicio.js"></script>
+</body>
+</html>
