@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es" data-root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Para empresas · TalentHub (réplica de portafolio)</title>
+  <meta name="description" content="Publica vacantes de TI con el sueldo a la vista. Réplica de portafolio con datos ficticios.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:opsz,wght@9..40,100..1000&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/pages/empresas.css">
+</head>
+<body data-page="empresas" data-sin-promo>
+  <main id="contenido" tabindex="-1">
+    <section class="emp-hero grano" aria-labelledby="emp-titulo">
+      <div class="container split emp-hero__inner">
+        <div>
+          <h1 class="display" id="emp-titulo">Contrata gente de TI que ya sabe cuánto pagas</h1>
+          <p class="emp-hero__lead">Publicas gratis, un validador revisa cada vacante y tú respondes las postulaciones desde un solo panel.</p>
+          <div class="cluster" style="margin-top:var(--sp-8)">
+            <a class="btn btn--primary" href="registro.html?tipo=empresa"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-plus"></use></svg>Publica tu primera vacante</a>
+            <a class="btn btn--ghost" href="planes.html"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg>Ver planes</a>
+          </div>
+        </div>
+        <figure class="emp-hero__piezas" aria-label="Ejemplo: una vacante publicada y una postulación recibida">
+          <div id="emp-vacante"><div class="vcard sk-card"><span class="sk" style="height:150px"></span></div></div>
+          <div class="post-ejemplo">
+            <div class="post-ejemplo__fila">
+              <span class="iniciales iniciales--teal iniciales--sm" aria-hidden="true">A1</span>
+              <div class="post-ejemplo__id"><strong>Aspirante 1</strong><span>Desarrollador Backend · <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-file-pdf"></use></svg>CV</span></div>
+              <span id="emp-track"></span>
+            </div>
+            <figcaption>Postulación recibida · vista de ejemplo</figcaption>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--surface" aria-labelledby="pasos-emp">
+      <div class="container">
+        <h2 id="pasos-emp">De la vacante a la contratación</h2>
+        <ol class="pasos-h" role="list">
+          <li>
+            <span class="paso__icono"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-briefcase"></use></svg></span>
+            <h3>Publicas tu vacante</h3>
+            <p>Puesto, requisitos y sueldo. El sueldo es obligatorio: es lo primero que lee quien busca.</p>
+          </li>
+          <li>
+            <span class="paso__icono"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-shield-check"></use></svg></span>
+            <h3>Un validador la revisa</h3>
+            <p>Sale al catálogo cuando la aprueba. Si cambias el puesto o el sueldo, vuelve a revisión.</p>
+          </li>
+          <li>
+            <span class="paso__icono"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-tray"></use></svg></span>
+            <h3>Respondes desde tu panel</h3>
+            <p>Ves cada postulación con su CV y la marcas en revisión, aceptada o rechazada. El aspirante recibe el aviso.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section grano grano--suave" aria-labelledby="panel-emp">
+      <div class="container split split--centro">
+        <figure class="card card--glass panel-recibidas">
+          <h3 class="panel-recibidas__titulo">Postulaciones recibidas</h3>
+          <ul role="list" id="emp-recibidas"></ul>
+          <figcaption>Vista de ejemplo de tu panel</figcaption>
+        </figure>
+        <div>
+          <h2 id="panel-emp">Todas tus postulaciones en un solo lugar</h2>
+          <p class="emp-texto">Cada aspirante llega con su CV. Lo marcas en revisión, aceptado o rechazado, y TalentHub le avisa en cuanto cambias su estado.</p>
+          <a class="btn btn--text" href="registro.html?tipo=empresa" style="margin-top:var(--sp-4)">Crea tu cuenta de empresa <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section emp-cierre" aria-labelledby="cierre-emp">
+      <div class="container">
+        <h2 id="cierre-emp">Tu próxima contratación empieza con una vacante</h2>
+        <p>Publicar es gratis y no pide tarjeta.</p>
+        <a class="btn btn--primary" href="registro.html?tipo=empresa"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-user-plus"></use></svg>Crear cuenta de empresa</a>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="js/layout.js"></script>
+  <script type="module" src="js/pages/empresas.js"></script>
+</body>
+</html>
