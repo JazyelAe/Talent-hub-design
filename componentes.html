@@ -68,7 +68,43 @@
         <button class="chip" type="button" aria-pressed="false">Híbrido</button><button class="chip" type="button" aria-pressed="false">Presencial <span class="chip__count">8</span></button>
       </div>
     </section>
+    <section aria-labelledby="t-form">
+      <h2 id="t-form">Campos de formulario</h2>
+      <form class="form" id="form-muestra" style="max-width:520px">
+        <div class="field">
+          <label class="field__label" for="m-correo">Correo electrónico</label>
+          <div class="control"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-envelope-simple"></use></svg>
+            <input class="input" id="m-correo" name="correo" type="email" autocomplete="email" placeholder="nombre@dominio.com" required></div>
+        </div>
+        <div class="field">
+          <label class="field__label" for="m-pass">Contraseña</label>
+          <div class="control"><input class="input" id="m-pass" name="pass" type="password" minlength="8" autocomplete="new-password" required>
+            <button class="control__btn" type="button" data-mostrar="m-pass" aria-label="Mostrar contraseña" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-eye"></use></svg></button></div>
+          <p class="field__help" id="m-pass-help">Mínimo 8 caracteres. Esta demo no guarda contraseñas.</p>
+        </div>
+        <div class="form__row form__row--2">
+          <div class="field"><label class="field__label" for="m-min">Salario mínimo</label>
+            <input class="input" id="m-min" type="number" min="5000" step="500" inputmode="numeric" placeholder="30000" required></div>
+          <div class="field"><label class="field__label" for="m-max">Salario máximo</label>
+            <input class="input" id="m-max" type="number" min="5000" step="500" inputmode="numeric" placeholder="50000" required data-min-campo="#m-min" data-min-campo-msg="Debe ser mayor o igual al salario mínimo."></div>
+        </div>
+        <div class="field"><label class="field__label" for="m-mod">Modalidad</label>
+          <select class="select" id="m-mod" required><option value="">Elige una opción</option><option>Remoto</option><option>Híbrido</option><option>Presencial</option></select></div>
+        <div class="field">
+          <div class="field__meta"><label class="field__label" for="m-msg">Mensaje <span class="field__opt">Opcional</span></label><span class="field__count" id="m-msg-count"></span></div>
+          <textarea class="textarea" id="m-msg" maxlength="500" data-contador="m-msg-count"></textarea>
+        </div>
+        <label class="check"><input type="checkbox" id="m-ok" required> Acepto el aviso de privacidad</label>
+        <p class="aviso aviso--warn"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-warning-circle"></use></svg><span><strong>Cambios sin guardar.</strong> Guarda antes de salir.</span></p>
+        <div class="cluster"><button class="btn btn--primary" type="submit"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Validar</button></div>
+      </form>
+    </section>
   </main>
   <script type="module" src="js/layout.js"></script>
+  <script type="module">
+    import { validarFormulario, contadores, mostrarPassword } from "./js/components/form.js";
+    validarFormulario(document.getElementById("form-muestra"), () => alert("Formulario válido (no se envía nada)."));
+    contadores(); mostrarPassword();
+  </script>
 </body>
 </html>
