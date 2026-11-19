@@ -1,6 +1,7 @@
 # PLAN — Implementación de la réplica
 
-> Estado: **borrador para aprobación** (Fase 2). Basado en `SPEC.md` (aprobado).
+> Estado: **aprobado**. Avance: **T00–T21 completadas** (ver [bitácora](docs/bitacora.md)); siguiente: T22.
+> Basado en `SPEC.md` (aprobado).
 
 ## Reglas de ejecución
 
@@ -46,7 +47,7 @@
 | T15 | Vacantes: búsqueda y filtros | P2 `vacantes.html` | Texto, ciudad, modalidad, tecnología, nivel, rango salarial doble; URL sincronizada; panel "Filtros" en móvil | `feat: listado de vacantes con filtros` |
 | T16 | Vacantes: paginación y estados | P2 | Paginación numerada accesible, "Ves X–Y de N", vacío "Ninguna vacante coincide" + limpiar | `feat: paginación y estados del listado` |
 | T17 | Detalle de vacante | P3 `vacante.html` | Membrete, resumen y tarjeta de acción sobre la banda; skeleton; 404 de vacante inexistente | `feat: detalle de vacante` |
-| T18 | Planes | P4 `planes.html` | Pestañas Empresas/Aspirantes, tarjetas de plan; "Contratar" muestra aviso de demo | `feat: pantalla de planes` |
+| T18 | Planes | P4 `planes.html` | Empresas y aspirantes apilados como en el original (se descartaron las pestañas), tarjetas de plan; "Contratar" muestra aviso de demo | `feat: pantalla de planes` |
 | T19 | Para empresas | P5 `empresas.html` | Hero con grano, pasos, panel de postulaciones de ejemplo, cierre | `feat: landing para empresas` |
 | T20 | Privacidad y 404 | P6 `privacidad.html`, P9 `404.html` | Texto ficticio con índice; 404 con número ilustrativo y buscador | `feat: aviso de privacidad y página 404` |
 | T21 | Aviso "Descarga la app" | `js/components/app-promo.js` | Tarjeta flotante / barra móvil, minimizable, QR decorativo | `feat: aviso de la app móvil` |
