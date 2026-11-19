@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es" data-root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guía de componentes · TalentHub (réplica)</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:opsz,wght@9..40,100..1000&display=swap">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/app.css">
+  <style>
+    .muestra { padding-block: 48px; display: grid; gap: 48px; }
+    .muestra section { display: grid; gap: 16px; }
+    .muestra h2 { font-size: 1.5rem; }
+  </style>
+</head>
+<body data-page="componentes">
+  <main id="contenido" class="container muestra" tabindex="-1">
+    <header>
+      <p class="eyebrow">Sistema de diseño</p>
+      <h1 class="display">Guía de componentes</h1>
+      <p style="color:var(--ink-2);max-width:60ch">Todas las piezas reutilizables de la réplica en un solo lugar, con sus variantes y estados.</p>
+    </header>
+    <section aria-labelledby="t-tipo">
+      <h2 id="t-tipo">Tipografía</h2>
+      <p class="display">Display 52 · Bricolage</p>
+      <h1>Título de página</h1>
+      <h2 style="font-size:var(--fs-h2)">Título de sección</h2>
+      <h3>Título de tarjeta · DM Sans 540</h3>
+      <p>Cuerpo 16px · DM Sans 460. <a class="link" href="#">Enlace en texto</a>.</p>
+      <p style="font-size:var(--fs-caption);color:var(--muted)">Metadato 13px en muted</p>
+    </section>
+  </main>
+  <script type="module" src="js/layout.js"></script>
+</body>
+</html>
