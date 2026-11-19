@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Tokens de diseño — TalentHub México (réplica)
+   Los nombres siguen 1:1 las claves del tailwind.config.js original
+   (night, canvas, ink, accent-on-dark…). Ver docs/design-tokens.md.
+   ========================================================================== */
+@layer tokens {
+  :root {
+    color-scheme: dark;
+
+    /* ── Superficies ─────────────────────────────────────────────── */
+    --night: #0a0a0a;            /* fondo de página */
+    --surface: #0f0f11;          /* bandas alternas, fondos de controles segmentados */
+    --canvas: #141416;           /* tarjetas y campos opacos */
+    --elevated: #161616;         /* tarjeta opaca dentro de banda oscura */
+    --glass: rgba(255, 255, 255, 0.06);        /* vidrio (efectivo ≈ #191919) */
+    --glass-hover: rgba(255, 255, 255, 0.09);
+    --glass-soft: rgba(255, 255, 255, 0.04);
+    --field-bg: rgba(255, 255, 255, 0.07);
+    --veil-panel: rgba(16, 16, 18, 0.5);       /* oscurece paneles sobre halos fuertes */
+    --nav-bg: rgba(10, 10, 10, 0.6);           /* 60%: mínimo que mantiene AA en la nav */
+    --promo-bg: #f1f3f8;                       /* única superficie clara: aviso de la app */
+
+    /* ── Texto (todos pasan AA sobre todas las superficies) ──────── */
+    --ink: #ededed;              /* 16.9:1 sobre night */
+    --ink-2: #c2c2c2;            /* 11.1:1 */
+    --muted: #8f8f8f;            /* 6.1:1 — metadatos, placeholders */
+    --muted-d: #8a8a8a;          /* 5.7:1 — metadatos en bandas oscuras */
+    --ink-on-light: #16161a;
+
+    /* ── Acento: el único color de acción ────────────────────────── */
+    --accent: #3355ff;           /* relleno; 5.41:1 con blanco encima. Nunca como texto */
+    --accent-hover: #2544e6;     /* 6.89:1 con blanco */
+    --accent-on-dark: #9db0ff;   /* el acento cuando es texto, icono o anillo: 9.51:1 */
+    --accent-tint: rgba(51, 85, 255, 0.08);
+
+    /* ── Estado: marca resolución, no actividad ──────────────────── */
+    --ok: #5eead4;               /* aceptada, publicada, remoto */
+    --danger: #f87171;           /* rechazada, error (texto/borde) */
+    --danger-fill: #dc2626;      /* botón destructivo: 4.83:1 con blanco */
+    --danger-fill-hover: #b91c1c;
+    --warn: #fcd34d;             /* solo avisos de formulario, nunca un estado */
+
+    /* Tintes de iniciales de empresa (sin ámbar, por daltonismo) */
+    --tint-blue-bg: rgba(51, 85, 255, 0.16);   --tint-blue-fg: #b4c2ff;
+    --tint-teal-bg: rgba(45, 212, 191, 0.14);  --tint-teal-fg: #7eecd9;
+    --tint-violet-bg: rgba(167, 139, 250, 0.16); --tint-violet-fg: #cfc2ff;
+    --tint-rose-bg: rgba(244, 114, 182, 0.14); --tint-rose-fg: #f9b4d6;
+    --tint-neutral-bg: rgba(255, 255, 255, 0.08); --tint-neutral-fg: #d6d6d6;
+
+    /* ── Bordes ──────────────────────────────────────────────────── */
+    --hairline: rgba(255, 255, 255, 0.10);
+    --hairline-strong: rgba(255, 255, 255, 0.18);
+    --edge: rgba(255, 255, 255, 0.08);         /* borde del vidrio */
+
+    /* ── Tipografía ──────────────────────────────────────────────── */
+    --font-sans: "DM Sans", "DM Sans Fallback", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-heading: "Bricolage Grotesque", "Bricolage Fallback", "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+    /* Escala con clamp(): el rol se mantiene, el tamaño fluye con el ancho */
+    --fs-display: clamp(2.375rem, 1.6rem + 3.2vw, 3.25rem);   /* 38 → 52 */
+    --fs-h1: clamp(2rem, 1.5rem + 2vw, 3rem);                  /* 32 → 48 */
+    --fs-h1-page: clamp(2rem, 1.7rem + 1.2vw, 2.375rem);       /* título de página: 32 → 38 */
+    --fs-h2: clamp(1.625rem, 1.2rem + 1.6vw, 2.25rem);         /* 26 → 36 */
+    --fs-h3: 1.5rem;                                           /* 24 */
+    --fs-card-title: 1.1875rem;                                /* 19 */
+    --fs-sub: 1.125rem;                                        /* 18 */
+    --fs-body: 1rem;                                           /* 16 */
+    --fs-sm: 0.9375rem;                                        /* 15 */
+    --fs-ui: 0.875rem;                                         /* 14 */
+    --fs-caption: 0.8125rem;                                   /* 13 */
+    --fs-micro: 0.75rem;                                       /* 12 */
+
+    --lh-display: 1.05;
+    --lh-heading: 1.1;
+    --lh-body: 1.5;
+    --ls-display: -0.02em;
+    --ls-h2: -0.015em;
+    --ls-h3: -0.01em;
+    --ls-caption: 0.025em;
+
+    --fw-book: 460;
+    --fw-mid: 500;
+    --fw-demi: 540;
+
+    /* ── Espaciado (base 4px) ────────────────────────────────────── */
+    --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+    --sp-5: 20px; --sp-6: 24px; --sp-7: 28px; --sp-8: 32px;
+    --sp-10: 40px; --sp-12: 48px; --sp-16: 64px; --sp-20: 80px;
+    --section-y: clamp(3.5rem, 7vw, 6.5rem);
+
+    /* ── Layout ──────────────────────────────────────────────────── */
+    --page-max: 1200px;
+    --doc-max: 896px;
+    --gutter: 24px;
+    --nav-h: 64px;
+    --promo-col: 340px;
+
+    /* ── Radios ──────────────────────────────────────────────────── */
+    --r-pill: 9999px;
+    --r-card: 24px;
+    --r-cardlg: 40px;
+    --r-panel: 42px;
+    --r-nav: 19px;
+    --r-md: 12px;
+    --r-ui: 10px;
+    --r-brand: 9px;
+    --r-icon: 4px;
+
+    /* ── Sombras: solo filo del vidrio y halos de foco ───────────── */
+    --shadow-glass-edge: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    --shadow-focus: 0 0 0 3px rgba(157, 176, 255, 0.24);
+    --shadow-focus-btn: 0 0 0 2px #fff, 0 0 0 4px var(--accent);
+
+    /* ── Vidrio ──────────────────────────────────────────────────── */
+    --blur-card: blur(22px) saturate(1.6);
+    --blur-nav: blur(28px) saturate(1.6);
+
+    /* ── Movimiento ──────────────────────────────────────────────── */
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --dur-fast: 0.18s;
+    --dur-base: 0.42s;
+    --dur-slow: 0.75s;
+  }
+
+  @media (min-width: 768px) {
+    :root { --gutter: 28px; }
+  }
+}
