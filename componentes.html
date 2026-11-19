@@ -116,6 +116,7 @@
     </section>
     <section aria-labelledby="t-vcard">
       <h2 id="t-vcard">Tarjeta de vacante</h2>
+      <p style="color:var(--ink-2)">Estados: <a class="link" href="?demo=lento#t-vcard">carga lenta</a> · <a class="link" href="?demo=error#t-vcard">error</a> · <a class="link" href="?demo=vacio#t-vcard">vacío</a> · <a class="link" href="componentes.html#t-vcard">normal</a> · <button class="btn btn--text" id="btn-toast" type="button">mostrar toast</button></p>
       <div class="grid grid--2" id="muestra-vcards"></div>
     </section>
   </main>
@@ -126,8 +127,16 @@
     contadores(); mostrarPassword();
     import { api } from "./js/api.js";
     import { vacanteCard } from "./js/components/vacante-card.js";
-    const vs = await api.vacantes();
-    document.getElementById("muestra-vcards").innerHTML = vs.slice(0, 4).map((v) => vacanteCard(v, { nivelTitulo: "h3" })).join("");
+    import { cargarCon } from "./js/components/estados.js";
+    import { toast } from "./js/components/toast.js";
+    const caja = document.getElementById("muestra-vcards");
+    cargarCon(caja, {
+      pedir: api.vacantes,
+      pintar: (vs) => { caja.innerHTML = vs.slice(0, 4).map((v) => vacanteCard(v)).join(""); },
+      vacio: { titulo: "Ninguna vacante coincide", texto: "Prueba con otros términos, otra ciudad o un sueldo más bajo." },
+      error: { titulo: "No pudimos cargar las vacantes" },
+    });
+    document.getElementById("btn-toast").addEventListener("click", () => toast("Postulación enviada", { texto: "Te avisaremos cuando la empresa la revise." }));
   </script>
 </body>
 </html>
