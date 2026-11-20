@@ -5,6 +5,7 @@ Todo es inventado: empresas, personas y textos no existen ni provienen del sitio
 """
 import json
 import random
+import unicodedata
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -132,7 +133,8 @@ def candidatos(vs):
     estados = ["sin_abrir", "sin_abrir", "en_revision", "en_revision", "aceptada", "rechazada"]
     out = []
     for i, nombre in enumerate(NOMBRES, start=1):
-        usuario = nombre.split()[0].lower() + str(random.randrange(10, 99))
+        base = unicodedata.normalize("NFD", nombre.split()[0].lower()).encode("ascii", "ignore").decode()
+        usuario = base + str(random.randrange(10, 99))
         out.append({
             "id": i,
             "nombre": nombre,

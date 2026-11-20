@@ -93,15 +93,15 @@
   {
     "id": 8,
     "nombre": "Héctor Navarro",
-    "usuario": "héctor91",
+    "usuario": "hector91",
     "profesion": "Desarrollador Full Stack",
-    "correo": "héctor91@correo.ejemplo",
+    "correo": "hector91@correo.ejemplo",
     "telefono": "5527122196",
     "vacante_id": 163,
     "estado": "rechazada",
     "fecha": "2026-11-05",
     "mensaje": "",
-    "cv": "CV-héctor91.pdf"
+    "cv": "CV-hector91.pdf"
   },
   {
     "id": 9,
@@ -119,15 +119,15 @@
   {
     "id": 10,
     "nombre": "Julián Paredes",
-    "usuario": "julián17",
+    "usuario": "julian17",
     "profesion": "Desarrollador Backend",
-    "correo": "julián17@correo.ejemplo",
+    "correo": "julian17@correo.ejemplo",
     "telefono": "5599106973",
     "vacante_id": 163,
     "estado": "sin_abrir",
     "fecha": "2026-11-13",
     "mensaje": "",
-    "cv": "CV-julián17.pdf"
+    "cv": "CV-julian17.pdf"
   },
   {
     "id": 11,

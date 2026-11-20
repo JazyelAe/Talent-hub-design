@@ -42,7 +42,7 @@ PANTALLAS = [
     ("vacantes", "vacantes.html", 0),
     ("vacantes-filtros", "vacantes.html?modalidad=remoto&nivel=Mid&smin=25000", 0),
     ("vacantes-vacio", "vacantes.html?q=cobol", 0),
-    ("vacantes-cargando", "vacantes.html?demo=lento", 6),
+    ("vacantes-cargando", "vacantes.html?demo=lento", -6),   # negativo: capturar a mitad de la espera
     ("vacantes-error", "vacantes.html?demo=error", 0),
     ("vacante-detalle", "vacante.html?id=163", 0),
     ("planes", "planes.html", 0),
@@ -131,7 +131,11 @@ def navegador():
 
 
 def esperar_lista(ws, extra):
-    """Espera a que no haya skeletons ni peticiones pendientes (o 10 s como máximo)."""
+    """Espera a que no haya skeletons ni peticiones pendientes (o 10 s como máximo).
+    Con `extra` negativo no espera la carga: captura el estado de carga a los |extra| s."""
+    if extra < 0:
+        time.sleep(-extra)
+        return
     fin = time.time() + 10
     while time.time() < fin:
         listo = ws.cmd("Runtime.evaluate", expression=(
@@ -186,6 +190,7 @@ def main():
                                  f"--user-data-dir={perfil}", "about:blank"],
                                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         try:
+            destino = None
             for _ in range(50):
                 try:
                     pestanas = json.load(urllib.request.urlopen(f"http://127.0.0.1:{PUERTO}/json"))
@@ -193,6 +198,8 @@ def main():
                     break
                 except Exception:
                     time.sleep(0.2)
+            if not destino:
+                sys.exit(f"Chrome no respondió en el puerto {PUERTO}. ¿Quedó otro proceso headless abierto?")
             ws = WS(destino["webSocketDebuggerUrl"])
             ws.cmd("Page.enable")
             ws.cmd("Runtime.enable")
@@ -210,7 +217,10 @@ def main():
                     print("ok", archivo.relative_to(RAIZ).as_posix())
         finally:
             proc.terminate()
-            proc.wait(timeout=10)
+            try:
+                proc.wait(timeout=10)
+            except subprocess.TimeoutExpired:
+                proc.kill()
 
 
 if __name__ == "__main__":
