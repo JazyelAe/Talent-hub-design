@@ -118,18 +118,47 @@ export const api = {
     store.set("vacantes-cambios", cambios);
   }),
 
+  // Las postulaciones del candidato demo a vacantes de la empresa demo (Cenote Labs, id 1)
+  // aparecen en el panel de la empresa; lo que la empresa decide vuelve a "Mis postulaciones".
   candidatos: () => red(async () => {
     const base = await cargar("candidatos");
     const cambios = store.get("candidatos-cambios", {});
     const vs = await todasLasVacantes();
     const porId = Object.fromEntries(vs.map((v) => [v.id, v]));
-    return base.map((c) => ({ ...c, ...(cambios[c.id] || {}), vacante: porId[c.vacante_id] }));
+    const perfil = store.get("perfil", { usuario: "sofia.demo", correo: "sofia@correo.ejemplo", telefono: "", profesion: "Desarrolladora Frontend", cv: "CV-Sofia-Demo.pdf" });
+    const demo = store.get("postulaciones-nuevas", [])
+      .filter((p) => porId[p.vacante_id]?.empresa_id === 1)
+      .map((p) => ({
+        id: `p${p.id}`, postulacion_id: p.id, demo: true, nombre: "Sofía Demo (tú, como candidato)",
+        usuario: perfil.usuario, profesion: perfil.profesion, correo: perfil.correo, telefono: perfil.telefono,
+        vacante_id: p.vacante_id, estado: "sin_abrir", fecha: p.fecha, mensaje: p.mensaje || "", cv: p.cv,
+      }));
+    return [...demo, ...base].map((c) => ({ ...c, ...(cambios[c.id] || {}), vacante: porId[c.vacante_id] }));
   }, { lista: true }),
 
   actualizarCandidato: (id, cambio) => red(async () => {
     const cambios = store.get("candidatos-cambios", {});
     cambios[id] = { ...(cambios[id] || {}), ...cambio };
     store.set("candidatos-cambios", cambios);
+    // Si es la postulación del candidato demo, se refleja en su seguimiento
+    if (String(id).startsWith("p")) {
+      const postId = Number(String(id).slice(1));
+      const post = store.get("postulaciones-nuevas", []).find((p) => p.id === postId);
+      if (!post) return;
+      const cambiosPost = store.get("postulaciones-cambios", {});
+      const actual = cambiosPost[postId] || {};
+      const eventos = [...(actual.eventos || post.eventos)];
+      const hoy = hoyISO();
+      const ESTADO = { sin_abrir: "enviada", en_revision: "en_revision", aceptada: "aceptada", rechazada: "rechazada" };
+      let estado = actual.estado || post.estado;
+      if (cambio.estado) {
+        estado = ESTADO[cambio.estado];
+        eventos.push({ tipo: estado, fecha: hoy });
+      }
+      if (cambio.entrevista) eventos.push({ tipo: "entrevista", fecha: hoy, fecha_entrevista: cambio.entrevista });
+      cambiosPost[postId] = { estado, eventos };
+      store.set("postulaciones-cambios", cambiosPost);
+    }
   }),
 };
 
