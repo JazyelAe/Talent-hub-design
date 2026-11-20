@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es" data-root="../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Postulaciones recibidas · TalentHub (réplica de portafolio)</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:opsz,wght@9..40,100..1000&display=swap">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/pages/cuenta.css">
+</head>
+<body data-page="empresa-postulaciones">
+  <main id="contenido" tabindex="-1">
+    <header class="band band--trabajo">
+      <div class="container">
+        <nav class="migas" aria-label="Migas de pan"><ol><li>Mi cuenta</li><li><span aria-current="page">Postulaciones recibidas</span></li></ol></nav>
+        <h1 class="band__title">Postulaciones recibidas</h1>
+        <p class="band__lead">Cada aspirante recibe un aviso cuando cambias su estado.</p>
+      </div>
+    </header>
+    <div class="container cuenta-pag" id="pagina">
+      <div class="band__fila">
+        <div class="filtro-estado" role="group" aria-label="Filtrar por estado" id="filtro"></div>
+        <div class="field" style="min-width:240px">
+          <label class="field__label" for="f-vacante">Vacante</label>
+          <select class="select" id="f-vacante"><option value="">Todas mis vacantes</option></select>
+        </div>
+      </div>
+      <p class="sr-only" aria-live="polite" id="anuncio"></p>
+      <div class="filas" id="lista"></div>
+    </div>
+  </main>
+  <script type="module" src="../js/layout.js"></script>
+  <script type="module" src="../js/pages/empresa-postulaciones.js"></script>
+</body>
+</html>
