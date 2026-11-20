@@ -39,7 +39,7 @@ function previa() {
     tecnologias: d.tecnologias.length ? d.tecnologias : ["Tecnología"],
     descripcion: d.descripcion || "Aquí aparecerá el inicio de la descripción.",
     fecha_publicacion: "2026-11-18",
-  });
+  }, { nivelTitulo: "p" });
 }
 
 function validarExtras() {

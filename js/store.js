@@ -33,6 +33,11 @@ export const sesion = {
   salir() { safe(() => sessionStorage.removeItem(NS + "rol")); },
 };
 
+// Atajo para enlaces de portafolio y capturas: ?como=candidato | ?como=empresa entra con esa
+// cuenta demo (sin credenciales). Se aplica antes de que la página lea el rol.
+const como = new URLSearchParams(location.search).get("como");
+if (como === "candidato" || como === "empresa") sesion.entrar(como);
+
 export const USUARIO_DEMO = {
   candidato: { nombre: "Sofía Demo", usuario: "sofia.demo", correo: "sofia@correo.ejemplo" },
   empresa: { nombre: "Cenote Labs", usuario: "cenote.demo", correo: "talento@cenote.ejemplo", empresa_id: 1 },

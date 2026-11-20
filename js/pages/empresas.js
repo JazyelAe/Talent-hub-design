@@ -21,7 +21,7 @@ $("#emp-recibidas").innerHTML = ejemplo.map(([ini, n, p, e, t]) => html`
 try {
   const vs = await api.vacantes();
   const v = vs.find((x) => x.empresa_id === 1) || vs[0];
-  $("#emp-vacante").innerHTML = v ? vacanteCard(v) : "";
+  $("#emp-vacante").innerHTML = v ? vacanteCard(v, { nivelTitulo: "p" }) : "";   // ilustración: no entra en la jerarquía de títulos
 } catch {
   $("#emp-vacante").innerHTML = "";
 }

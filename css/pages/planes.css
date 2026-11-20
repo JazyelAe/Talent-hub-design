@@ -19,7 +19,7 @@
   .planes__grupo { margin-top: var(--sp-16); }
   .planes__grupo h2 { margin-bottom: var(--sp-6); }
   .planes__grid { display: grid; gap: var(--sp-5); }
-  @media (min-width: 768px) { .planes__grid { grid-template-columns: repeat(3, 1fr); } }
+  .planes__grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
   @media (min-width: 768px) { .planes__grid--2 { grid-template-columns: repeat(2, 1fr); max-width: 740px; } }
 
   .plan {
@@ -35,7 +35,7 @@
   .plan--actual { border-color: rgba(157, 176, 255, 0.55); }
   .plan__nombre { font-size: var(--fs-h3); font-weight: var(--fw-demi); text-transform: uppercase; letter-spacing: -0.01em; }
   .plan__lema { margin-top: 4px; font-size: var(--fs-ui); color: var(--ink-2); }
-  .plan__precio { display: flex; align-items: baseline; gap: 8px; padding-bottom: var(--sp-5); border-bottom: 1px solid var(--hairline); }
+  .plan__precio { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; padding-bottom: var(--sp-5); border-bottom: 1px solid var(--hairline); }
   .plan__precio strong { font-size: 2.25rem; font-weight: var(--fw-demi); letter-spacing: -0.03em; line-height: 1.1; font-variant-numeric: tabular-nums; }
   .plan__precio span { font-size: var(--fs-ui); color: var(--muted); }
   .plan__rasgos { display: grid; gap: var(--sp-3); flex: 1; align-content: start; }
