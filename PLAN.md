@@ -1,6 +1,6 @@
 # PLAN — Implementación de la réplica
 
-> Estado: **aprobado**. Avance: **T00–T21 completadas** (ver [bitácora](docs/bitacora.md)); siguiente: T22.
+> Estado: **completado** — T00–T38 implementadas (ver [bitácora](docs/bitacora.md)).
 > Basado en `SPEC.md` (aprobado).
 
 ## Reglas de ejecución

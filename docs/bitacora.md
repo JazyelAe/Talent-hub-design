@@ -1,6 +1,6 @@
 # Bitácora de implementación (Fase 3)
 
-Decisiones tomadas en cada tarea del [PLAN](../PLAN.md), en 3–5 líneas. Cada tarea es un commit.
+Decisiones tomadas en cada tarea del [PLAN](../PLAN.md), en 3–5 líneas. Cada tarea es un commit (Conventional Commits en español).
 
 ## Etapa A — Cimientos
 
@@ -52,7 +52,45 @@ Decisiones tomadas en cada tarea del [PLAN](../PLAN.md), en 3–5 líneas. Cada 
 
 **T21 · Aviso de la app.** En escritorio ocupa su columna de 340 px y la página se reacomoda con transición al minimizarlo; en móvil es una barra inferior. Solo lo ven visitantes, se recuerda si lo cerraste, y el QR es decorativo con un botón que explica que la app real es solo para testers.
 
+## Etapa D — Sesión demo
+
+**T22 · Sesión simulada.** El "inicio de sesión" solo guarda el rol (`candidato` o `empresa`) en `sessionStorage`; no hay credenciales en ningún lado. Las páginas privadas llaman a `exigirRol()`, que muestra el estado «Inicia sesión para ver…» del original con un acceso demo en un clic. El destino `?volver=` solo acepta rutas internas, para evitar redirecciones abiertas.
+
+**T23 · Login y recuperar.** Son maquetas honestas: validan el formato, dicen que no hay cuentas reales y **vacían la contraseña del campo al enviar**. El foco va a los accesos demo, que respetan `?volver=` (si venías de una vacante, regresas a ella).
+
+**T24 · Registro.** El tipo de cuenta usa tarjetas de opción (un radiogroup real con los radios ocultos) porque es una decisión de dos opciones que ramifica el formulario. Las reglas de contraseña se marcan al cumplirse y se anuncian a lectores de pantalla. El botón no se deshabilita: un botón gris no explica qué falta.
+
+## Etapa E — Flujo del candidato
+
+**T25 · Postulación.** Es un diálogo con el CV del perfil por defecto (sin repetir datos), la opción de subir un PDF validado (tipo y ≤ 5 MB, sin subirlo a ningún lado), un mensaje opcional y consentimiento obligatorio. Al enviar, un toast y la tarjeta cambian a «Ya te postulaste».
+
+**T26 · Mis postulaciones.** El ProcessTrack grande con etiquetas reemplaza al punto de color. Las métricas cuentan hacia arriba al aparecer (sin animación con reduced-motion) y el historial va en `<details>` (accesible sin JavaScript extra). El filtro de estado vive en la URL.
+
+**T27 · Perfil.** Una barra fija de «Cambios sin guardar» aparece solo cuando hay diferencias con lo guardado; hay aviso del navegador al salir con cambios. Las habilidades son chips (Enter o coma) y quitar el CV usa mantener presionado más un diálogo. Se corrigió un error del componente de chips: avisaba de un cambio durante su propio pintado inicial.
+
+## Etapa F — Flujo de la empresa
+
+**T28 · Mis vacantes.** Pausar es reversible y directo; eliminar exige mantener presionado y el diálogo dice cuántas personas se enteran. La API se extendió para que las postulaciones del candidato demo a la empresa demo aparezcan aquí, y para que las decisiones de la empresa vuelvan a «Mis postulaciones»: los dos flujos se demuestran en una sola pestaña.
+
+**T29 · Publicar.** La vista previa en vivo de la tarjeta muestra el resultado mientras se escribe. La validación nativa y la propia (tecnologías en chips, modalidad) se muestran a la vez, no una por una. La vacante queda «En revisión». Las píldoras de modalidad usan `:has(input:checked)` en vez de un `aria-checked` inválido sobre un `<label>`.
+
+**T30 · Postulaciones recibidas.** Las acciones dependen del estado (revisar → aceptar o rechazar → entrevista o reabrir). El contacto se revela solo al aceptar. La entrevista valida fecha futura y horario, y rechazar con entrevista agendada lo dice en el diálogo. Se verificó el ciclo completo candidato → empresa → candidato.
+
+## Etapa G — Pulido y publicación
+
+**T31 · Auditoría.** No se permitió cargar axe-core desde un CDN en el navegador de pruebas, así que escribí una auditoría propia (`tools/auditoria.js`): contraste WCAG con composición de capas translúcidas, nombres accesibles, etiquetas, IDs, `h1` y jerarquía. Más un modo de QA que revisa 20 pantallas a 390/768/1440 px. Encontró y se corrigieron: el desborde de Planes en tableta, la falta de `h1` durante la carga del detalle y saltos de encabezado en tarjetas ilustrativas.
+
+**T32 · Capturas.** `--screenshot` de Chrome headless capturaba antes de que corriera el JavaScript y no respetaba 390 px. La solución fue un cliente mínimo del protocolo DevTools con la librería estándar de Python (WebSocket propio): emula el ancho real, espera a que no haya skeletons y captura la página completa. Resultado: 40 capturas reproducibles con un comando.
+
+**T33 · GitHub Pages.** Todas las rutas son relativas (funcionan bajo `/Talent-hub-design/`), `.nojekyll` para servir los archivos tal cual, y la 404 fija su `<base>`. Se añadió `?como=candidato|empresa` para enlazar directo a las vistas privadas desde el README.
+
+## Etapa H — Documentación
+
+**T34–T38.** Tokens explicados con su porqué y contraste medido; flujos en Mermaid; decisiones de UX por pantalla con heurísticas de Nielsen y WCAG; el proceso HTML vs Figma; y el README con aviso, rol, capturas, índice y ejecución local.
+
 ## Apoyos añadidos fuera del plan
 
 - `componentes.html`: guía viva de componentes con todas sus variantes y estados (útil para revisión y para mostrar el sistema).
+- `tools/auditoria.js` y `tools/capturas.py` (con `--revisar`): QA y capturas automáticas sin dependencias.
+- `?como=candidato|empresa`: enlace directo a las vistas privadas con la cuenta demo.
 - `tools/servidor.py`: servidor local con `Cache-Control: no-store`, porque el servidor estándar de Python dejaba CSS en caché del navegador durante el desarrollo.
