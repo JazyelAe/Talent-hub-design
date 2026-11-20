@@ -4,6 +4,7 @@ import { ROOT, html, raw, icon, $ } from "./utils.js";
 import { sesion, store, USUARIO_DEMO } from "./store.js";
 import "./components/chispas.js";
 import "./components/app-promo.js";
+import "./session.js";
 
 const LINKS = {
   visitante: [
