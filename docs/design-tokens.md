@@ -1,167 +1,129 @@
-# Design tokens — TalentHub México
+# Design tokens — paleta, tipografía y espaciado explicados
 
-> Extraídos el 2026-11-18 de los **estilos computados** de https://www.talent-hub.me (páginas
-> públicas: `/`, `/vacantes`, `/login`) con Playwright, a 1440 px y 390 px.
-> Esta es la versión "en bruto" de la Fase 0; en la Fase 4 se amplía con la explicación de diseño.
+Los tokens son las decisiones de diseño convertidas en variables: un solo lugar donde vive cada
+color, tamaño y espacio. En la réplica están en [`css/tokens.css`](../css/tokens.css) y usan **los
+mismos nombres que el `tailwind.config.js` del producto original** (`--night`, `--canvas`,
+`--ink`, `--accent-on-dark`…), así que cada variable se puede rastrear hasta su origen.
 
-## Contraste con la fuente oficial
+## De dónde salen
 
-Después de medir, encontré el código del proyecto en
-[gitlab.com/talenthub4902147/talenthub-mexico](https://gitlab.com/talenthub4902147/talenthub-mexico):
-su `DESIGN.md` y `frontend/tailwind.config.js` son la guía de estilo oficial. **Mis mediciones
-coinciden**; estos son los tokens que el código aclara o que no aparecían en las páginas públicas:
+1. **Medición** (Fase 0): con Playwright abrí las páginas públicas de
+   [talent-hub.me](https://www.talent-hub.me) a 1440 y 390 px y extraje los estilos computados
+   (colores, fuentes, tamaños, radios, sombras, media queries) recorriendo el DOM.
+2. **Contraste con la fuente**: después encontré el código público del proyecto
+   ([GitLab](https://gitlab.com/talenthub4902147/talenthub-mexico)), con su `DESIGN.md` y su
+   configuración de Tailwind. **Las mediciones coincidieron**; el código aclaró los tokens que no
+   aparecían en las páginas públicas (superficies opacas, rojo destructivo, ámbar, curvas).
+3. **Una corrección**: medí un gris `#6b6b6b` con contraste de 3.7:1 (no pasa AA en texto
+   pequeño). No es un token del sistema; en la réplica todo texto usa `--muted` o `--muted-d`.
 
-| Token oficial (Tailwind) | Valor | Nota |
-|---|---|---|
-| `night` | `#0a0a0a` | Fondo de página (coincide) |
-| `canvas` | `#141416` | Tarjetas y campos **opacos** (pantallas con sesión, tablas) |
-| `surface` | `#0f0f11` | Bandas alternas, fondo de controles segmentados |
-| `elevated` | `#161616` | Tarjeta opaca dentro de banda oscura (coincide) |
-| `ink` / `ink-2` / `muted` / `muted-d` | `#ededed` / `#c2c2c2` / `#8f8f8f` / `#8a8a8a` | Todos pasan AA. El `#6b6b6b` que medí no es un token del sistema (probablemente texto decorativo de la maqueta del teléfono) |
-| `accent` / `accent-hover` / `accent-on-dark` | `#3355ff` / `#2544e6` / `#9db0ff` | El azul **nunca** va como texto sobre oscuro (3.4:1); como texto se usa `accent-on-dark` |
-| `ok` | `#5eead4` | Resuelto a favor: aceptada, publicada, remoto |
-| `danger` / `danger-fill` / `danger-fill-hover` | `#f87171` / `#dc2626` / `#b91c1c` | Rechazada/error (texto) y botón destructivo (relleno) |
-| `warn` | `#fcd34d` | Solo avisos de formulario, **nunca** un estado (daltonismo) |
-| `hairline` / `hairline-strong` | `rgba(255,255,255,.10)` / `.18` | Bordes |
-| Escala tipográfica | display 52 · h1 48 · h2 36 · h3 24 · sub 18 · body 16 · caption 13 | Con `clamp()`: por eso medí h1 = 38px y h2 = 32px |
-| Pesos | `book` 460 · `mid` 500 · `demi` 540 | |
-| Radios | `pill` 9999 · `card` 24 · `cardlg` 40 · `panel` 42 · `nav` 19 · `ui` 10 · `icon` 4 | |
-| Sombras | `glass-edge-d` `inset 0 1px 0 rgba(255,255,255,.14)` · `focus-accent-d` `0 0 0 3px rgba(157,176,255,.24)` | No hay sombras de elevación |
-| Desenfoque | card 22px · nav 16px · overlay 28px | Vidrio con `saturate(1.6)` |
-| Curva | `cubic-bezier(.22,.61,.36,1)` · 0.18s / 0.42s / 0.75s | Única curva CSS |
-| Contenedor | `max-width: 1200px`, gutters 24px (28px desde `md`); lectura 896px | |
-| Iconos | Phosphor, estilo *duotone* | |
+---
 
-Principios de diseño explícitos en `DESIGN.md` que guiarán la réplica: vidrio sobre halos de color,
-un solo color de acción, color de estado solo para *resolución* (teal/rojo), progreso por posición
-(`ProcessTrack`), botones con icono salvo "Cancelar", cada lista con estados de carga, vacío y error.
+## Paleta
 
-## Hallazgos técnicos
+### La idea: oscuro, con vidrio, y un solo color que significa "acción"
 
-- El sitio usa **Tailwind CSS** con tema propio (clases como `text-ink`, `text-body`), breakpoints por
-  defecto de Tailwind y prefijos `--tw-*`. Las notificaciones usan la librería *Sileo* (`--sileo-*`).
-- **Tema oscuro único** (no hay modo claro).
-- Grosor tipográfico variable (fuentes variables 100–900): pesos no estándar como **460** y **540**.
-- Respeta `prefers-reduced-motion` y usa `(hover: hover)` para no aplicar hovers en táctil.
-
-## Color
-
-### Superficies
-| Token propuesto | Valor | Uso observado |
-|---|---|---|
-| `--color-bg` | `#0a0a0a` | Fondo de `body` y del header |
-| `--color-bg-raised` | `#161616` | Superficies sólidas (menús, avisos) |
-| `--color-surface` | `rgba(255,255,255,.06)` | Tarjetas de vacante (el valor más usado) |
-| `--color-surface-2` | `rgba(255,255,255,.04)` | Superficie sutil (barra de filtros) |
-| `--color-input-bg` | `rgba(255,255,255,.07)` | Campos de formulario |
-| `--color-overlay` | `rgba(10,10,10,.6–.7)` | Header translúcido / overlays |
-| `--color-light-surface` | `#f1f3f8` | Tarjeta flotante "Descarga la app" (única superficie clara) |
-
-### Texto
-| Token | Valor | Uso | Contraste sobre `#0a0a0a` |
+| Rol | Token | Valor | Por qué |
 |---|---|---|---|
-| `--color-ink` | `#ededed` | Texto principal, títulos | ≈ 16.8:1 ✅ |
-| `--color-ink-2` | `#c2c2c2` | Etiquetas, chips de tecnología | ≈ 11.3:1 ✅ |
-| `--color-muted` | `#8f8f8f` | Metadatos (empresa, ciudad, fecha) | ≈ 6.2:1 ✅ |
-| `--color-muted-2` | `#8a8a8a` | Variante de metadatos | ≈ 5.8:1 ✅ |
-| `--color-subtle` | `#6b6b6b` | Texto terciario | ≈ 3.7:1 ⚠️ **no pasa AA en texto normal** |
+| Página | `--night` | `#0a0a0a` | Casi negro, no negro puro: reduce el deslumbramiento |
+| Tarjeta opaca, campos | `--canvas` | `#141416` | Un escalón sobre la página; para tablas y pantallas de uso diario |
+| Bandas alternas | `--surface` | `#0f0f11` | Diferencia secciones sin bordes |
+| Vidrio | `--glass` | `rgba(255,255,255,.06)` | La firma visual: deja ver los halos de color de atrás |
+| Texto principal | `--ink` | `#ededed` | 16.9:1; nunca blanco puro, otra vez por deslumbramiento |
+| Texto de apoyo | `--ink-2` | `#c2c2c2` | 11.1:1 |
+| Metadatos | `--muted` / `--muted-d` | `#8f8f8f` / `#8a8a8a` | 6.1:1 / 5.7:1: el gris más bajo que sigue pasando AA |
+| **Acción** | `--accent` | `#3355ff` | Ultramar. Relleno de botones primarios; 5.41:1 con texto blanco |
+| Acción como texto | `--accent-on-dark` | `#9db0ff` | Enlaces, iconos, anillos de foco: 9.51:1 |
 
-> ⚠️ `#6b6b6b` solo es válido para texto grande o decorativo. En la réplica lo subiré a `#8a8a8a`
-> en texto pequeño (lo documentaré como mejora de accesibilidad).
+**Regla del azul.** `#3355ff` como *texto* sobre oscuro mide 3.4:1 y reprueba AA, por eso cuando
+el acento es texto se usa su versión clara `#9db0ff`. Y el azul **solo** marca "esto se puede
+presionar": ningún tag, ícono decorativo ni estado es azul. Así la persona nunca duda qué es
+clicable (heurística de *consistencia y estándares*).
 
-### Marca y acentos
-| Token | Valor | Uso |
-|---|---|---|
-| `--color-primary` | `#3355ff` | CTA "Registrarse", botón "Iniciar sesión", anillo de foco |
-| `--color-primary-soft` | `#9db0ff` | Chip de filtro activo ("Todas"), enlaces, borde de foco |
-| `--color-primary-softer` | `#b4c2ff` | Variante de texto de acento |
-| `--color-primary-tint` | `rgba(51,85,255,.08)` | Fondo de chip activo |
-| `--color-teal` | `#5eead4` / `#7eecd9` | Badge **Remoto** (texto) |
-| `--color-teal-bg` | `rgba(45,212,191,.14)` | Fondo de avatar/badge teal |
-| `--color-teal-border` | `rgba(94,234,212,.35)` | Borde del badge Remoto |
-| `--color-violet` | `#cfc2ff` | Avatares de empresa (variante violeta) |
-| `--color-violet-bg` | `rgba(167,139,250,.16)` | Fondo avatar violeta |
-| Botón primario: texto | `#ffffff` sobre `#3355ff` | ≈ 5.4:1 ✅ |
+### Estados: el color marca *resolución*, no actividad
 
-### Bordes
-| Token | Valor |
-|---|---|
-| `--border-subtle` | `rgba(255,255,255,.08)` (tarjetas) |
-| `--border-default` | `rgba(255,255,255,.10)` (inputs, separadores) |
-| `--border-strong` | `rgba(255,255,255,.18)` (badges Híbrido/Presencial, botones secundarios) |
+| Significado | Token | Valor | Uso |
+|---|---|---|---|
+| Resuelto a favor | `--ok` | `#5eead4` (teal) | Aceptada, publicada, Remoto |
+| Resuelto en contra | `--danger` | `#f87171` (rojo) | Rechazada, error |
+| Botón destructivo | `--danger-fill` | `#dc2626` | 4.83:1 con blanco (el `#f87171` con blanco da 2.77:1) |
+| Aviso de formulario | `--warn` | `#fcd34d` | Solo avisos; **nunca** un estado |
 
-### Estados (toasts, librería Sileo — en OKLCH)
-| Estado | Valor |
-|---|---|
-| success | `oklch(.723 .219 142.1)` (verde) |
-| error | `oklch(.637 .237 25.3)` (rojo) |
-| warning | `oklch(.795 .184 86.0)` (ámbar) |
-| info | `oklch(.685 .169 237.3)` (azul cielo) |
-| loading | `oklch(.556 0 0)` (gris) |
+¿Por qué no ámbar para "en revisión"? Con daltonismo rojo-verde (deuteranopia), ámbar y rojo se
+vuelven casi idénticos: "sigues en proceso" y "te rechazaron" se confundirían. Por eso lo que está
+en curso no lleva color: lleva tinta plena y su **posición** en el `ProcessTrack` (paso 2 de 3).
+El estado se entiende sin depender del color.
 
-Los estados de postulación ("Enviada", "En revisión", "Aceptada") aparecen en la maqueta del inicio;
-sus colores exactos dependen de las capturas con sesión que aún no tengo (ver inventario).
+### Profundidad sin sombras
+
+No hay `box-shadow` de elevación. La profundidad se construye con:
+1. translucidez + `backdrop-filter: blur(22px) saturate(1.6)` sobre halos de color fijos;
+2. escalones de superficie (`night` → vidrio → `canvas`);
+3. un filo de 1 px (`rgba(255,255,255,.08)`) más una línea de luz arriba
+   (`inset 0 1px 0 rgba(255,255,255,.14)`);
+4. paneles que cruzan el borde de la banda oscura (−96 px).
+
+Las únicas sombras son el filo del vidrio y los **anillos de foco**.
+
+---
 
 ## Tipografía
 
-| Rol | Familia | Tamaño / interlínea | Peso | Tracking |
+| Rol | Fuente | Tamaño | Peso | Por qué |
 |---|---|---|---|---|
-| Display (H1 inicio) | **Bricolage Grotesque** | 52px / 54.6px (1.05) | 500 | -0.02em (-1.04px) |
-| H1 de página | Bricolage Grotesque | 38px / 47.5px (1.25) | 500 | -0.02em |
-| H2 de sección | Bricolage Grotesque | 32px / 35.2px (1.1) | 540 | -0.015em |
-| Título de tarjeta (H3) | **DM Sans** | 19px / 26.1px (1.375) | 540 | -0.01em |
-| Salario en tarjeta | DM Sans | 20px | 540 | — |
-| Cuerpo | DM Sans | 16px / 24px (1.5) | 460 | normal |
-| Cuerpo secundario | DM Sans | 15px | 460 | — |
-| Botón / chip / nav | DM Sans | 14px / 21px | 500 | — |
-| Botón grande (form) | DM Sans | 15px / 22.5px | 500 | — |
-| Label / metadato | DM Sans | 13px / 19.5px | 460 | 0.025em |
-| Micro (badge, "MXN mensual") | DM Sans | 12–12.5px | 460 | — |
-| Overline de footer ("EXPLORAR") | DM Sans | 13px, mayúsculas | 540 | amplio |
+| Display / h1 / h2 | **Bricolage Grotesque** | 52 · 38–48 · 26–36 px con `clamp()` | 500–540 | Anchos irregulares y eje óptico: personalidad en titulares |
+| h3 hacia abajo y toda la interfaz | **DM Sans** | 24 · 19 · 16 · 15 · 14 · 13 px | 460 / 500 / 540 | Geométrica y tranquila; buena cobertura de acentos |
+| Cifras (salarios, contadores) | DM Sans + `tabular-nums` | — | 540 | Los dígitos se alinean en columna |
 
-Pila de respaldo: `ui-sans-serif, system-ui, -apple-system, sans-serif`. Ambas fuentes están en
-Google Fonts (se cargarán desde ahí en la réplica).
+- **Pesos 460 y 540**: intermedios a propósito (se necesitan las fuentes variables). Ningún
+  titular pasa de 540: la contención es parte de la identidad.
+- **Tracking**: negativo en titulares (−0.02 em), positivo en etiquetas pequeñas (+0.025 em).
+- **`clamp()`**: el rol se mantiene y el tamaño fluye con el ancho; en móvil un h2 baja a 26 px y
+  sigue siendo el nivel "display" de esa pantalla.
+- **Los salarios no usan la fuente display**: sus anchos irregulares deshacen las cifras tabulares.
+- **Fuentes de respaldo con `size-adjust`** medido (DM Sans 93 %, Bricolage 102.51 % respecto a
+  Arial): el titular no "salta" cuando llega la fuente real.
 
-## Espaciado
+---
 
-Escala de 4px (Tailwind). Valores más frecuentes:
+## Espaciado y layout
 
-- **Gaps:** 4, 6, 8, 10, 12, 16, 20, 24 px; grid de footer `48px 32px`.
-- **Padding de tarjeta:** 28px. Separación entre tarjetas: 16px.
-- **Chips de tecnología:** `4px 10px`; chips de filtro: `6px 14px`; badges: `4px 12px`.
-- **Botón pequeño (nav):** `8px 18px`; botón grande (formularios): `11px 22px`.
-- **Inputs:** `10px 14px`, `44px` a la izquierda cuando llevan icono.
-- **Header:** 64px de alto (`--nav-flow: calc(64px + var(--aviso-alto))`).
-- **Contenedor:** `max-width: 1200px` (≈1144px útil con 28px de gutter); gutter móvil 24px.
+- **Base 4 px**: 4 · 8 · 12 · 16 · 20 · 24 · 28 · 32 · 40 · 48 · 64 · 80.
+- **Secciones**: `padding-block: clamp(3.5rem, 7vw, 6.5rem)`: fluido, no un valor fijo para un ancho.
+- **Tarjetas**: 28 px en marketing, 16–24 px en pantallas de trabajo.
+- **Contenedor**: 1200 px máximo con márgenes de 24 px (28 px desde 768 px); 896 px en lectura.
+- **Nav**: 64 px de alto, guardado en `--nav-h`; las bandas suben exactamente esa medida para
+  pasar por debajo del vidrio de la nav.
+- **Breakpoints** (los de Tailwind): 640 · 768 · 1024 · 1280. Mobile-first: los estilos base son
+  los de móvil y los `@media (min-width)` añaden columnas.
 
 ## Radios
 
 | Token | Valor | Uso |
 |---|---|---|
-| `--radius-pill` | `9999px` | Botones, chips, badges (el más usado) |
-| `--radius-xl` | `24px` | Tarjetas |
-| `--radius-md` | `12px` | Avatares de empresa, contenedores pequeños |
-| `--radius-sm` | `10px` | Inputs |
-
-## Sombras y efectos
-
-- Tarjetas: **sin sombra exterior**; usan un brillo superior `inset 0 1px 0 rgba(255,255,255,.14)`
-  + borde `rgba(255,255,255,.08)` (estilo "vidrio" sobre fondo oscuro).
-- Fondo de las cabeceras: degradados difusos azul/teal sobre `#0a0a0a` (glow).
-- **Foco en inputs:** borde `rgba(157,176,255,.55)` + anillo `0 0 0 3px rgba(157,176,255,.24)`.
-- **Foco en botones:** `0 0 0 2px #fff, 0 0 0 4px #3355ff` (doble anillo, visible sobre cualquier fondo).
-
-## Breakpoints (Tailwind por defecto)
-
-| Nombre | min-width | Cambio observado |
-|---|---|---|
-| `sm` | 640px | — |
-| `md` | 768px | Nav completa vs. menú hamburguesa |
-| `lg` | 1024px | Grid de vacantes a 2 columnas |
-| `xl` | 1280px | — |
-| `2xl` | 1536px | — |
+| `--r-pill` | 9999 px | **Todo** control: botones, chips, tags. La silueta en píldora es la identidad |
+| `--r-card` | 24 px | Tarjetas y paneles |
+| `--r-ui` | 10 px | Campos de formulario |
+| `--r-md` | 12 px | Iniciales de empresa |
 
 ## Movimiento
 
-- Curva "spring" para toasts, duración 600ms.
-- Animaciones condicionadas a `prefers-reduced-motion: no-preference`.
+- Una sola curva en CSS: `cubic-bezier(.22,.61,.36,1)` (desaceleración sin rebote); 0.18 / 0.42 / 0.75 s.
+- `prefers-reduced-motion` quita **desplazamiento**, no retroalimentación: se apagan bucles,
+  elevaciones y reflejos, pero los cambios de color y los spinners siguen (son la señal de que algo
+  pasa).
+- El vidrio solo anima **posición**, nunca opacidad: un ancestro con `opacity < 1` hace que el
+  `backdrop-filter` pinte plano.
+
+## Medidas extraídas (referencia)
+
+| Elemento medido en el sitio | Valor computado |
+|---|---|
+| `body` | DM Sans 16/24 px, peso 460, `#ededed` sobre `#0a0a0a` |
+| h1 de inicio | Bricolage 52/54.6 px, 500, −1.04 px |
+| Tarjeta de vacante | padding 28 px, radio 24 px, fondo `rgba(255,255,255,.06)`, borde `.08`, filo `inset 0 1px 0 rgba(255,255,255,.14)` |
+| Título de tarjeta | 19 px / 540 / −0.19 px |
+| Salario en tarjeta | 20 px / 540 |
+| Botón "Registrarse" | 14 px / 500, padding 8×18 px, `#3355ff`, píldora |
+| Campo enfocado | borde `rgba(157,176,255,.55)` + `0 0 0 3px rgba(157,176,255,.24)` |
+| Breakpoints en CSS | 640, 768, 1024, 1280, 1536 px; `(hover: hover)`; `prefers-reduced-motion` |
