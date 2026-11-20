@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es" data-root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crea tu cuenta · TalentHub (réplica de portafolio)</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:opsz,wght@9..40,100..1000&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="registro" data-sin-nav>
+  <main id="contenido" class="auth">
+    <div class="auth__col auth__col--ancha">
+      <a class="auth__volver auth__volver-movil" href="index.html"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-left"></use></svg>Volver al inicio</a>
+      <a class="brand" href="index.html" aria-label="TalentHub, inicio"><span class="brand__mark" aria-hidden="true">th</span><span class="brand__name">TalentHub</span></a>
+      <section class="auth__card" aria-labelledby="reg-t" id="reg-card">
+        <h1 class="auth__titulo" id="reg-t">Crea tu cuenta</h1>
+        <p class="auth__sub">Gratis, y puedes cambiar de plan cuando quieras</p>
+        <div id="aviso-demo" style="margin-top:var(--sp-4)"></div>
+        <form class="form" id="form-registro" autocomplete="off">
+          <!-- Dos opciones que ramifican el formulario: visibles, no escondidas en un select -->
+          <fieldset class="choices">
+            <legend class="field__label">Tipo de cuenta</legend>
+            <label class="choice">
+              <input type="radio" name="tipo" value="candidato" checked>
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-user"></use></svg>
+              <strong>Busco empleo</strong><small>Aplica a vacantes y guarda tu perfil.</small>
+              <span class="choice__check" aria-hidden="true"><svg class="icon"><use href="assets/icons/sprite.svg#i-check"></use></svg></span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="tipo" value="empresa" id="tipo-empresa">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-buildings"></use></svg>
+              <strong>Publico vacantes</strong><small>Recibe postulaciones y gestiona tu equipo.</small>
+              <span class="choice__check" aria-hidden="true"><svg class="icon"><use href="assets/icons/sprite.svg#i-check"></use></svg></span>
+            </label>
+          </fieldset>
+          <div class="form__row form__row--2">
+            <div class="field">
+              <label class="field__label" for="g-usuario">Nombre de usuario</label>
+              <input class="input" id="g-usuario" name="usuario" type="text" required minlength="3" maxlength="30" pattern="[A-Za-z0-9._]+" data-patron-msg="Usa solo letras sin acento, números, punto o guion bajo." autocapitalize="none" spellcheck="false">
+            </div>
+            <div class="field">
+              <label class="field__label" for="g-tel">Teléfono <span class="field__opt">Opcional</span></label>
+              <input class="input" id="g-tel" name="telefono" type="tel" inputmode="numeric" pattern="[0-9]{10}" data-patron-msg="Escribe 10 dígitos, sin espacios." placeholder="5512345678" autocomplete="off">
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="g-correo">Correo electrónico</label>
+            <input class="input" id="g-correo" name="correo" type="email" required autocomplete="off" placeholder="nombre@dominio.com">
+          </div>
+          <div class="field">
+            <label class="field__label" for="g-pass">Contraseña</label>
+            <div class="control"><input class="input" id="g-pass" name="pass" type="password" required data-validar="validarPassword" aria-describedby="g-reglas" autocomplete="off">
+              <button class="control__btn" type="button" data-mostrar="g-pass" aria-label="Mostrar contraseña" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-eye"></use></svg></button></div>
+            <ul class="reglas-pass" id="g-reglas" role="list">
+              <li data-regla="largo"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-x"></use></svg>Al menos 8 caracteres <span class="sr-only">pendiente</span></li>
+              <li data-regla="numero"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-x"></use></svg>Un número <span class="sr-only">pendiente</span></li>
+              <li data-regla="mayus"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-x"></use></svg>Una mayúscula <span class="sr-only">pendiente</span></li>
+            </ul>
+          </div>
+          <div class="field">
+            <label class="field__label" for="g-pass2">Confirmar contraseña</label>
+            <input class="input" id="g-pass2" name="pass2" type="password" required data-match="#g-pass" data-match-msg="Las contraseñas no coinciden." autocomplete="off">
+          </div>
+          <button class="btn btn--primary btn--block" type="submit"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-user-plus"></use></svg>Crear cuenta</button>
+          <p class="auth__pie" style="font-size:var(--fs-caption)">Al registrarte aceptas nuestro <a href="privacidad.html">aviso de privacidad</a>.</p>
+        </form>
+      </section>
+      <p class="auth__pie">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+    </div>
+  </main>
+  <script type="module" src="js/layout.js"></script>
+  <script type="module" src="js/pages/auth.js"></script>
+</body>
+</html>

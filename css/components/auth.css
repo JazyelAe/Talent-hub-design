@@ -100,7 +100,7 @@
   .choice:has(input:checked) .icon:not(.choice__check .icon) { color: var(--accent-on-dark); }
   .choice:has(input:checked) .choice__check { display: grid; }
   .choice:has(input:focus-visible) { outline: 2px solid var(--accent-on-dark); outline-offset: 2px; }
-  @media (max-width: 379px) { .choices { grid-template-columns: 1fr; } }
+  @media (max-width: 359px) { .choices { grid-template-columns: 1fr; } }
 
   /* Validador visual de contraseña */
   .reglas-pass { display: grid; gap: 4px; margin-top: 6px; }
