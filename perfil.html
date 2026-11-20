@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es" data-root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi perfil · TalentHub (réplica de portafolio)</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:opsz,wght@9..40,100..1000&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/pages/cuenta.css">
+</head>
+<body data-page="perfil">
+  <main id="contenido" tabindex="-1">
+    <header class="band band--trabajo">
+      <div class="container">
+        <nav class="migas" aria-label="Migas de pan"><ol><li>Mi cuenta</li><li><span aria-current="page">Mi perfil</span></li></ol></nav>
+        <h1 class="band__title">Mi perfil</h1>
+        <p class="band__lead">Las empresas lo ven junto con tu CV cuando te postulas.</p>
+      </div>
+    </header>
+    <div class="container cuenta-pag" id="pagina">
+      <div class="perfil-grid">
+        <aside class="card perfil-resumen" id="resumen" aria-label="Tu foto y tu perfil"><span class="sk" style="width:88px;height:88px;border-radius:50%"></span></aside>
+        <form id="form-perfil" novalidate>
+          <section class="card seccion-form" aria-labelledby="s-cuenta">
+            <h2 id="s-cuenta">Información de cuenta</h2>
+            <div class="form__row form__row--2">
+              <div class="field">
+                <label class="field__label" for="f-usuario">Nombre de usuario</label>
+                <input class="input" id="f-usuario" name="usuario" required minlength="3" maxlength="30" pattern="[A-Za-z0-9._]+" data-patron-msg="Usa solo letras sin acento, números, punto o guion bajo." autocomplete="off">
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-tel">Teléfono <span class="field__opt">Opcional</span></label>
+                <input class="input" id="f-tel" name="telefono" type="tel" inputmode="numeric" pattern="[0-9]{10}" data-patron-msg="Escribe 10 dígitos, sin espacios." placeholder="2221234567" autocomplete="off">
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-correo">Correo electrónico</label>
+              <input class="input" id="f-correo" name="correo" type="email" required autocomplete="off">
+            </div>
+          </section>
+
+          <section class="card seccion-form" aria-labelledby="s-prof">
+            <h2 id="s-prof">Perfil profesional</h2>
+            <div class="field">
+              <label class="field__label" for="f-prof">Profesión o especialidad</label>
+              <input class="input" id="f-prof" name="profesion" maxlength="60" placeholder="Desarrolladora Frontend">
+            </div>
+            <div class="field">
+              <div class="field__meta"><label class="field__label" for="f-resumen">Resumen de experiencia</label><span class="field__count" id="f-resumen-count"></span></div>
+              <textarea class="textarea" id="f-resumen" name="resumen" maxlength="600" data-contador="f-resumen-count" placeholder="Describe brevemente tu trayectoria y tus logros…"></textarea>
+            </div>
+            <div class="field">
+              <span class="field__label" id="hab-label">Habilidades</span>
+              <div class="chips-entrada" id="habilidades">
+                <ul class="cluster" data-chips role="list" aria-labelledby="hab-label" style="gap:6px"></ul>
+                <label class="sr-only" for="f-hab">Añadir habilidad</label>
+                <input id="f-hab" type="text" data-placeholder="React, Python, AWS…" aria-describedby="hab-ayuda">
+                <input type="hidden" name="habilidades">
+              </div>
+              <p class="field__help" id="hab-ayuda">Escribe una y pulsa Enter o coma. Máximo 15.</p>
+            </div>
+          </section>
+
+          <section class="card seccion-form" aria-labelledby="s-cv">
+            <h2 id="s-cv">Currículum</h2>
+            <div id="cv-actual"></div>
+            <div class="field">
+              <label class="field__label" for="f-cv">Reemplazar CV</label>
+              <input class="input" id="f-cv" name="cv" type="file" accept="application/pdf,.pdf" data-tipo="pdf" data-max-mb="5">
+              <p class="field__help">Se sube al guardar · PDF, máximo 5 MB. En la demo solo se guarda el nombre.</p>
+            </div>
+          </section>
+
+          <div class="barra-guardar" id="barra-guardar" hidden role="region" aria-label="Cambios sin guardar">
+            <p><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-warning-circle"></use></svg>Cambios sin guardar</p>
+            <div class="cluster">
+              <button class="btn btn--ghost btn--sm" type="button" id="descartar">Descartar</button>
+              <button class="btn btn--primary btn--sm" type="submit"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-floppy-disk"></use></svg>Guardar cambios</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="js/layout.js"></script>
+  <script type="module" src="js/pages/perfil.js"></script>
+</body>
+</html>
