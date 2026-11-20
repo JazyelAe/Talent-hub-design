@@ -4,6 +4,7 @@ import { api } from "../api.js";
 import { sesion } from "../store.js";
 import { tagModalidad } from "../components/vacante-card.js";
 import { estadoError, estadoVacio } from "../components/estados.js";
+import { abrirPostulacion } from "../components/postular.js";
 
 const id = new URLSearchParams(location.search).get("id");
 const principal = $("#principal");
@@ -107,4 +108,13 @@ async function cargar() {
 }
 
 principal.addEventListener("click", (e) => { if (e.target.closest("[data-reintentar]")) cargar(); });
+
+// Postularme: abre el diálogo y, al enviar, la tarjeta cambia a "Ya te postulaste"
+let vacanteActual;
+lateral.addEventListener("lateral:listo", (e) => { vacanteActual = e.detail; });
+lateral.addEventListener("click", (e) => {
+  if (e.target.closest("#postularme") && vacanteActual) {
+    abrirPostulacion(vacanteActual, { alTerminar: () => pintarLateral(vacanteActual) });
+  }
+});
 cargar();
