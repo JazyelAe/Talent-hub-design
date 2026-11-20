@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es" data-root="../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publicar vacante · TalentHub (réplica de portafolio)</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:opsz,wght@9..40,100..1000&display=swap">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/pages/cuenta.css">
+</head>
+<body data-page="empresa-vacantes">
+  <main id="contenido" tabindex="-1">
+    <header class="band band--trabajo">
+      <div class="container">
+        <nav class="migas" aria-label="Migas de pan"><ol><li>Mi cuenta</li><li><a href="vacantes.html">Mis vacantes</a></li><li><span aria-current="page">Publicar vacante</span></li></ol></nav>
+        <h1 class="band__title">Publicar vacante</h1>
+        <p class="band__lead">El sueldo es obligatorio: es lo primero que lee quien busca.</p>
+      </div>
+    </header>
+    <div class="container cuenta-pag" id="pagina">
+      <div class="publicar-grid">
+        <form class="card form" id="form-publicar" novalidate>
+          <div class="field">
+            <label class="field__label" for="v-titulo">Título del puesto</label>
+            <input class="input" id="v-titulo" name="titulo" required minlength="5" maxlength="70" placeholder="Desarrollador Frontend">
+          </div>
+          <div class="form__row form__row--2">
+            <div class="field">
+              <label class="field__label" for="v-nivel">Nivel</label>
+              <select class="select" id="v-nivel" name="nivel" required>
+                <option value="">Elige un nivel</option><option value="Jr">Junior</option><option value="Mid">Mid</option><option value="Sr">Senior</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="v-exp">Experiencia requerida</label>
+              <select class="select" id="v-exp" name="experiencia" required>
+                <option value="">Elige un rango</option><option value="0">Sin experiencia</option><option value="1">1 año</option><option value="2">2 años</option>
+                <option value="3">3 años</option><option value="4">4 años</option><option value="5">5 años o más</option>
+              </select>
+            </div>
+          </div>
+          <fieldset class="field" style="border:0;padding:0;margin:0">
+            <legend class="field__label" style="margin-bottom:6px">Modalidad</legend>
+            <div class="cluster" role="radiogroup" aria-label="Modalidad">
+              <label class="chip"><input class="sr-only" type="radio" name="modalidad" value="remoto" required> Remoto</label>
+              <label class="chip"><input class="sr-only" type="radio" name="modalidad" value="hibrido"> Híbrido</label>
+              <label class="chip"><input class="sr-only" type="radio" name="modalidad" value="presencial"> Presencial</label>
+            </div>
+            <p class="field__error" id="modalidad-error" role="alert"></p>
+          </fieldset>
+          <div class="field">
+            <label class="field__label" for="v-ciudad">Ubicación</label>
+            <div class="control"><svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#i-map-pin"></use></svg>
+              <input class="input" id="v-ciudad" name="ciudad" required list="v-ciudades" placeholder="Ciudad de México" autocomplete="off"></div>
+            <datalist id="v-ciudades"><option value="Ciudad de México, CDMX"><option value="Guadalajara, Jal."><option value="Monterrey, N.L."><option value="Mérida, Yuc."><option value="Querétaro, Qro."><option value="Puebla, Pue."></datalist>
+          </div>
+          <div class="form__row form__row--2">
+            <div class="field">
+              <label class="field__label" for="v-smin">Salario mínimo</label>
+              <input class="input" id="v-smin" name="salario_min" type="number" inputmode="numeric" required min="5000" max="300000" step="500" placeholder="30000">
+              <p class="field__help">En pesos mexicanos, al mes.</p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="v-smax">Salario máximo</label>
+              <input class="input" id="v-smax" name="salario_max" type="number" inputmode="numeric" required min="5000" max="300000" step="500" placeholder="50000" data-min-campo="#v-smin" data-min-campo-msg="Debe ser mayor o igual al salario mínimo.">
+            </div>
+          </div>
+          <div class="field">
+            <span class="field__label" id="tec-label">Tecnologías requeridas</span>
+            <div class="chips-entrada" id="tecnologias">
+              <ul class="cluster" data-chips role="list" aria-labelledby="tec-label" style="gap:6px"></ul>
+              <label class="sr-only" for="v-tec">Añadir tecnología</label>
+              <input id="v-tec" type="text" data-placeholder="React, Node.js, PostgreSQL" aria-describedby="tec-ayuda">
+              <input type="hidden" name="tecnologias" id="v-tec-valor">
+            </div>
+            <p class="field__help" id="tec-ayuda">Escribe una y pulsa Enter o coma. Las tres primeras se muestran en la tarjeta.</p>
+            <p class="field__error" id="tec-error" role="alert"></p>
+          </div>
+          <div class="field">
+            <div class="field__meta"><label class="field__label" for="v-desc">Descripción</label><span class="field__count" id="v-desc-count"></span></div>
+            <textarea class="textarea" id="v-desc" name="descripcion" required minlength="40" maxlength="800" data-contador="v-desc-count" placeholder="Qué hará la persona, con quién trabajará y qué impacto tendrá."></textarea>
+          </div>
+          <div class="field">
+            <label class="field__label" for="v-extra">Otros requisitos <span class="field__opt">Opcional</span></label>
+            <input class="input" id="v-extra" name="requisitos_extra" maxlength="160" placeholder="Inglés intermedio, disponibilidad para viajar…">
+          </div>
+          <p class="aviso">
+            <svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#i-shield-check"></use></svg>
+            <span>Al publicar, la vacante queda <strong>en revisión</strong>. Un validador la aprueba antes de que aparezca en el listado.</span>
+          </p>
+          <div class="cluster">
+            <a class="btn btn--ghost" href="vacantes.html">Cancelar</a>
+            <button class="btn btn--primary" type="submit"><svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#i-paper-plane-tilt"></use></svg>Enviar a revisión</button>
+          </div>
+        </form>
+        <aside class="vista-previa" aria-labelledby="vp-t">
+          <p id="vp-t">Vista previa · así la verán en el listado</p>
+          <div id="vista-previa" aria-live="off"></div>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="../js/layout.js"></script>
+  <script type="module" src="../js/pages/empresa-publicar.js"></script>
+</body>
+</html>

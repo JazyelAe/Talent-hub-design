@@ -73,12 +73,14 @@
     transition: background-color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
   }
   .chip:hover { border-color: var(--hairline-strong); color: var(--ink); }
-  .chip[aria-pressed="true"], .chip[aria-checked="true"], .chip.is-active {
+  .chip[aria-pressed="true"], .chip:has(input:checked), .chip.is-active {
     border-color: rgba(157, 176, 255, 0.55);
     background: var(--accent-tint);
     color: var(--accent-on-dark);
   }
   .chip .icon { width: 14px; height: 14px; }
+  .chip:has(input:focus-visible) { outline: 2px solid var(--accent-on-dark); outline-offset: 2px; }
+  label.chip { cursor: pointer; }
   .chip__count {
     min-width: 20px;
     padding: 0 6px;

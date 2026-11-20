@@ -8,11 +8,11 @@ export function chipsEntrada(raiz, { valores = [], max = 15, alCambiar } = {}) {
   const lista = raiz.querySelector("[data-chips]");
   let items = [...valores];
 
-  const pintar = () => {
+  const pintar = (avisar = true) => {
     lista.innerHTML = items.map((v, i) => html`<li class="chip-q">${v}<button type="button" data-quitar="${i}" aria-label="Quitar ${v}">${icon("x")}</button></li>`).join("");
     oculto.value = items.join(", ");
     input.placeholder = items.length ? "" : input.dataset.placeholder;
-    alCambiar?.(items);
+    if (avisar) alCambiar?.(items);
   };
   const agregar = (texto) => {
     const v = texto.trim().replace(/,$/, "");
@@ -35,6 +35,6 @@ export function chipsEntrada(raiz, { valores = [], max = 15, alCambiar } = {}) {
     input.focus();
   });
   raiz.addEventListener("click", (e) => { if (e.target === raiz) input.focus(); });
-  pintar();
+  pintar(false);   // el pintado inicial no cuenta como cambio
   return { valores: () => [...items], poner: (vs) => { items = [...vs]; pintar(); } };
 }
